@@ -1,0 +1,15 @@
+[Info]: [16:12:47] Connection attempt with : SELECT verifyUser('ipodloukaki13@gmail.com','123') AS nombre;
+Got response : 1
+[Info]: [16:12:47] Account data fetched with : SELECT `ID_Comptes`, `Nom`, `Prenom`, `AdresseMail`, `MotDePasse`, `isAdmin`, `isActive` 
+            FROM `comptes` 
+            WHERE AdresseMail = LCASE('ipodloukaki13@gmail.com') AND MotDePasse = SHA('123');
+[Info]: [16:57:39] Connection attempt with : SELECT verifyUser('ipodloukaki13@gmail.com','123') AS nombre;
+Got response : 1
+[Info]: [16:57:39] Account data fetched with : SELECT `ID_Comptes`, `Nom`, `Prenom`, `AdresseMail`, `MotDePasse`, `isAdmin`, `isActive` 
+            FROM `comptes` 
+            WHERE AdresseMail = LCASE('ipodloukaki13@gmail.com') AND MotDePasse = SHA('123');
+[Info]: [18:41:37] Connection attempt with : SELECT verifyUser('ipodloukaki13@gmail.com','123') AS nombre;
+Got response : 1
+[Info]: [18:41:37] Account data fetched with : SELECT `ID_Comptes`, `Nom`, `Prenom`, `AdresseMail`, `MotDePasse`, `isAdmin`, `isActive` 
+            FROM `comptes` 
+            WHERE AdresseMail = LCASE('ipodloukaki13@gmail.com') AND MotDePasse = SHA('123');

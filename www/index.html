@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://kit.fontawesome.com/bf567895b4.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="./user/login.css">
+        <title>JPO</title>
+    </head>
+    <body>
+        <div class="login">
+            <h2 class="active"> Connexion </h2>
+            <form id="login-form">
+                <input type="text" placeholder="johnDoe@exemple.com" class="text" name="email" required>
+                <span>Mail</span>
+                <br>
+                <br>
+                <input type="password" placeholder="******" class="text" name="psw" required>
+                <span>Mot de passe</span>
+                <br>
+                <input type="checkbox" id="checkbox-1-1" class="custom-checkbox" checked />
+                <label for="checkbox-1-1">Enregistré mes identifiants</label>
+                <input type="submit" class="signin" value="Se connecter"/>
+                <hr>
+                <a href="#">Mot de passe oublié ?</a>
+            </form>
+        </div>
+        <div id="failure">Echec lors de la connexion. Veuillez vérifier vos identifiants</div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script src="./user/jQuery/jQuery.js" type="text/javascript"></script>
+        <script src="./user/forms.js" type="module"></script>
+    </body>
+</html>

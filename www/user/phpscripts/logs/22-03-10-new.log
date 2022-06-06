@@ -1,0 +1,385 @@
+[Info]: [08:45:12] Connection attempt with : SELECT verifyUser('ipodloukaki13@gmail.com','123') AS nombre;
+Got response : 1
+[Info]: [08:45:12] Account data fetched with : SELECT `ID_Comptes`, `Nom`, `Prenom`, `AdresseMail`, `MotDePasse`, `isAdmin`, `isActive` 
+            FROM `comptes` 
+            WHERE AdresseMail = LCASE('ipodloukaki13@gmail.com') AND MotDePasse = SHA('123');
+[Info]: [08:45:12] Connection attempt with : SELECT verifyUser('ipodloukaki13@gmail.com','123') AS nombre;
+Got response : 1
+[Info]: [08:45:12] Account data fetched with : SELECT `ID_Comptes`, `Nom`, `Prenom`, `AdresseMail`, `MotDePasse`, `isAdmin`, `isActive` 
+            FROM `comptes` 
+            WHERE AdresseMail = LCASE('ipodloukaki13@gmail.com') AND MotDePasse = SHA('123');
+[Error]: [08:45:15] User:[3] Tried to Send with data : 
+   ["5"]
+
+[Info]: [15:21:04] Connection attempt with : SELECT verifyUser('','') AS nombre;
+Got response : 0
+[Info]: [15:21:05] Connection attempt with : SELECT verifyUser('','') AS nombre;
+Got response : 0
+[Info]: [15:21:05] Connection attempt with : SELECT verifyUser('','') AS nombre;
+Got response : 0
+[Info]: [15:21:07] Connection attempt with : SELECT verifyUser('','') AS nombre;
+Got response : 0
+[Info]: [15:44:30] Connection attempt with : SELECT verifyUser('maevabonnasse2002@gmail.com','Bmaeva') AS nombre;
+Got response : 0
+[Info]: [15:44:33] Connection attempt with : SELECT verifyUser('maevabonnasse2002@gmail.com','Bmaeva') AS nombre;
+Got response : 0
+[Info]: [15:46:46] Connection attempt with : SELECT verifyUser('ipodloukaki13@gmail.com','123') AS nombre;
+Got response : 1
+[Info]: [15:46:46] Account data fetched with : SELECT `ID_Comptes`, `Nom`, `Prenom`, `AdresseMail`, `MotDePasse`, `isAdmin`, `isActive` 
+            FROM `comptes` 
+            WHERE AdresseMail = LCASE('ipodloukaki13@gmail.com') AND MotDePasse = SHA('123');
+[Info]: [15:47:26] Connection attempt with : SELECT verifyUser('ipodloukaki13@gmail.com','123') AS nombre;
+Got response : 1
+[Info]: [15:47:26] Account data fetched with : SELECT `ID_Comptes`, `Nom`, `Prenom`, `AdresseMail`, `MotDePasse`, `isAdmin`, `isActive` 
+            FROM `comptes` 
+            WHERE AdresseMail = LCASE('ipodloukaki13@gmail.com') AND MotDePasse = SHA('123');
+[Info]: [15:48:40] Connection attempt with : SELECT verifyUser('ipodloukaki13@gmail.com','123') AS nombre;
+Got response : 1
+[Info]: [15:48:40] Account data fetched with : SELECT `ID_Comptes`, `Nom`, `Prenom`, `AdresseMail`, `MotDePasse`, `isAdmin`, `isActive` 
+            FROM `comptes` 
+            WHERE AdresseMail = LCASE('ipodloukaki13@gmail.com') AND MotDePasse = SHA('123');
+[Info]: [15:49:26] Connection attempt with : SELECT verifyUser('ipodloukaki13@gmail.com','123vu') AS nombre;
+Got response : 0
+[Info]: [15:50:35] Connection attempt with : SELECT verifyUser('','') AS nombre;
+Got response : 0
+[Info]: [15:51:45] Connection attempt with : SELECT verifyUser('','') AS nombre;
+Got response : 0
+[Info]: [15:51:46] Connection attempt with : SELECT verifyUser('','') AS nombre;
+Got response : 0
+[Info]: [15:51:47] Connection attempt with : SELECT verifyUser('','') AS nombre;
+Got response : 0
+[Info]: [15:51:48] Connection attempt with : SELECT verifyUser('','') AS nombre;
+Got response : 0
+[Info]: [15:51:55] Connection attempt with : SELECT verifyUser('ef','') AS nombre;
+Got response : 0
+[Info]: [15:52:03] Connection attempt with : SELECT verifyUser('','') AS nombre;
+Got response : 0
+[Info]: [15:52:42] Connection attempt with : SELECT verifyUser('ef','') AS nombre;
+Got response : 0
+[Info]: [15:52:53] Connection attempt with : SELECT verifyUser('','') AS nombre;
+Got response : 0
+[Info]: [15:52:54] Connection attempt with : SELECT verifyUser('','') AS nombre;
+Got response : 0
+[Info]: [15:53:00] Connection attempt with : SELECT verifyUser('de','ed') AS nombre;
+Got response : 0
+[Info]: [15:53:01] Connection attempt with : SELECT verifyUser('de','ed') AS nombre;
+Got response : 0
+[Info]: [15:53:01] Connection attempt with : SELECT verifyUser('de','ed') AS nombre;
+Got response : 0
+[Info]: [15:53:13] Connection attempt with : SELECT verifyUser('','') AS nombre;
+Got response : 0
+[Info]: [15:54:11] Connection attempt with : SELECT verifyUser('','') AS nombre;
+Got response : 0
+[Info]: [15:54:19] Connection attempt with : SELECT verifyUser('','') AS nombre;
+Got response : 0
+[Info]: [15:54:33] Connection attempt with : SELECT verifyUser('de','ed') AS nombre;
+Got response : 0
+[Info]: [15:54:39] Connection attempt with : SELECT verifyUser('','') AS nombre;
+Got response : 0
+[Info]: [15:55:24] Connection attempt with : SELECT verifyUser('','') AS nombre;
+Got response : 0
+[Info]: [15:55:28] Connection attempt with : SELECT verifyUser('','') AS nombre;
+Got response : 0
+[Info]: [15:55:32] Connection attempt with : SELECT verifyUser('','') AS nombre;
+Got response : 0
+[Info]: [15:56:05] Connection attempt with : SELECT verifyUser('','') AS nombre;
+Got response : 0
+[Info]: [15:56:09] Connection attempt with : SELECT verifyUser('','') AS nombre;
+Got response : 0
+[Info]: [15:56:24] Connection attempt with : SELECT verifyUser('','') AS nombre;
+Got response : 0
+[Info]: [15:56:27] Connection attempt with : SELECT verifyUser('','') AS nombre;
+Got response : 0
+[Info]: [15:56:44] Connection attempt with : SELECT verifyUser('','') AS nombre;
+Got response : 0
+[Info]: [15:56:56] Connection attempt with : SELECT verifyUser('','') AS nombre;
+Got response : 0
+[Info]: [15:56:58] Connection attempt with : SELECT verifyUser('','') AS nombre;
+Got response : 0
+[Info]: [15:57:09] Connection attempt with : SELECT verifyUser('','') AS nombre;
+Got response : 0
+[Info]: [15:57:12] Connection attempt with : SELECT verifyUser('','') AS nombre;
+Got response : 0
+[Info]: [15:57:16] Connection attempt with : SELECT verifyUser('','') AS nombre;
+Got response : 0
+[Info]: [15:57:30] Connection attempt with : SELECT verifyUser('','') AS nombre;
+Got response : 0
+[Info]: [15:57:36] Connection attempt with : SELECT verifyUser('','') AS nombre;
+Got response : 0
+[Info]: [15:57:51] Connection attempt with : SELECT verifyUser('','') AS nombre;
+Got response : 0
+[Info]: [15:58:00] Connection attempt with : SELECT verifyUser('','') AS nombre;
+Got response : 0
+[Info]: [15:58:13] Connection attempt with : SELECT verifyUser('','') AS nombre;
+Got response : 0
+[Info]: [15:58:24] Connection attempt with : SELECT verifyUser('','') AS nombre;
+Got response : 0
+[Info]: [15:58:59] Connection attempt with : SELECT verifyUser('','') AS nombre;
+Got response : 0
+[Info]: [15:59:02] Connection attempt with : SELECT verifyUser('','') AS nombre;
+Got response : 0
+[Info]: [15:59:14] Connection attempt with : SELECT verifyUser('','') AS nombre;
+Got response : 0
+[Info]: [16:00:36] Connection attempt with : SELECT verifyUser('','') AS nombre;
+Got response : 0
+[Info]: [16:00:38] Connection attempt with : SELECT verifyUser('','') AS nombre;
+Got response : 0
+[Info]: [16:00:55] Connection attempt with : SELECT verifyUser('','') AS nombre;
+Got response : 0
+[Info]: [16:01:02] Connection attempt with : SELECT verifyUser('','') AS nombre;
+Got response : 0
+[Info]: [16:01:48] Connection attempt with : SELECT verifyUser('','') AS nombre;
+Got response : 0
+[Info]: [16:02:31] Connection attempt with : SELECT verifyUser('','') AS nombre;
+Got response : 0
+[Info]: [16:03:06] Connection attempt with : SELECT verifyUser('','') AS nombre;
+Got response : 0
+[Info]: [16:03:08] Connection attempt with : SELECT verifyUser('','') AS nombre;
+Got response : 0
+[Info]: [16:03:09] Connection attempt with : SELECT verifyUser('','') AS nombre;
+Got response : 0
+[Info]: [16:03:09] Connection attempt with : SELECT verifyUser('','') AS nombre;
+Got response : 0
+[Info]: [16:03:09] Connection attempt with : SELECT verifyUser('','') AS nombre;
+Got response : 0
+[Info]: [16:03:09] Connection attempt with : SELECT verifyUser('','') AS nombre;
+Got response : 0
+[Info]: [16:03:09] Connection attempt with : SELECT verifyUser('','') AS nombre;
+Got response : 0
+[Info]: [16:03:10] Connection attempt with : SELECT verifyUser('','') AS nombre;
+Got response : 0
+[Info]: [16:03:11] Connection attempt with : SELECT verifyUser('','') AS nombre;
+Got response : 0
+[Info]: [16:03:12] Connection attempt with : SELECT verifyUser('','') AS nombre;
+Got response : 0
+[Info]: [16:03:12] Connection attempt with : SELECT verifyUser('','') AS nombre;
+Got response : 0
+[Info]: [16:03:12] Connection attempt with : SELECT verifyUser('','') AS nombre;
+Got response : 0
+[Info]: [16:03:12] Connection attempt with : SELECT verifyUser('','') AS nombre;
+Got response : 0
+[Info]: [16:03:15] Connection attempt with : SELECT verifyUser('','') AS nombre;
+Got response : 0
+[Info]: [16:03:16] Connection attempt with : SELECT verifyUser('','fe') AS nombre;
+Got response : 0
+[Info]: [16:03:16] Connection attempt with : SELECT verifyUser('','fe') AS nombre;
+Got response : 0
+[Info]: [16:03:17] Connection attempt with : SELECT verifyUser('','fe') AS nombre;
+Got response : 0
+[Info]: [16:03:20] Connection attempt with : SELECT verifyUser('','') AS nombre;
+Got response : 0
+[Info]: [16:03:24] Connection attempt with : SELECT verifyUser('','') AS nombre;
+Got response : 0
+[Info]: [16:03:33] Connection attempt with : SELECT verifyUser('','') AS nombre;
+Got response : 0
+[Info]: [16:03:54] Connection attempt with : SELECT verifyUser('','') AS nombre;
+Got response : 0
+[Info]: [16:04:12] Connection attempt with : SELECT verifyUser('','') AS nombre;
+Got response : 0
+[Info]: [16:04:32] Connection attempt with : SELECT verifyUser('','') AS nombre;
+Got response : 0
+[Info]: [16:04:47] Connection attempt with : SELECT verifyUser('','') AS nombre;
+Got response : 0
+[Info]: [16:04:50] Connection attempt with : SELECT verifyUser('','') AS nombre;
+Got response : 0
+[Info]: [16:05:06] Connection attempt with : SELECT verifyUser('','') AS nombre;
+Got response : 0
+[Info]: [16:05:10] Connection attempt with : SELECT verifyUser('','') AS nombre;
+Got response : 0
+[Info]: [16:05:28] Connection attempt with : SELECT verifyUser('','') AS nombre;
+Got response : 0
+[Info]: [16:05:46] Connection attempt with : SELECT verifyUser('','') AS nombre;
+Got response : 0
+[Info]: [16:06:10] Connection attempt with : SELECT verifyUser('','') AS nombre;
+Got response : 0
+[Info]: [16:06:17] Connection attempt with : SELECT verifyUser('','') AS nombre;
+Got response : 0
+[Info]: [16:06:21] Connection attempt with : SELECT verifyUser('','') AS nombre;
+Got response : 0
+[Info]: [16:06:25] Connection attempt with : SELECT verifyUser('','') AS nombre;
+Got response : 0
+[Info]: [16:06:38] Connection attempt with : SELECT verifyUser('','') AS nombre;
+Got response : 0
+[Info]: [16:06:42] Connection attempt with : SELECT verifyUser('','') AS nombre;
+Got response : 0
+[Info]: [16:06:45] Connection attempt with : SELECT verifyUser('','') AS nombre;
+Got response : 0
+[Info]: [16:06:59] Connection attempt with : SELECT verifyUser('','') AS nombre;
+Got response : 0
+[Info]: [16:07:03] Connection attempt with : SELECT verifyUser('','') AS nombre;
+Got response : 0
+[Info]: [16:07:09] Connection attempt with : SELECT verifyUser('','') AS nombre;
+Got response : 0
+[Info]: [16:07:14] Connection attempt with : SELECT verifyUser('','') AS nombre;
+Got response : 0
+[Info]: [16:07:32] Connection attempt with : SELECT verifyUser('','') AS nombre;
+Got response : 0
+[Info]: [16:07:35] Connection attempt with : SELECT verifyUser('','') AS nombre;
+Got response : 0
+[Info]: [16:08:01] Connection attempt with : SELECT verifyUser('','') AS nombre;
+Got response : 0
+[Info]: [16:08:04] Connection attempt with : SELECT verifyUser('','') AS nombre;
+Got response : 0
+[Info]: [16:08:13] Connection attempt with : SELECT verifyUser('','') AS nombre;
+Got response : 0
+[Info]: [16:08:31] Connection attempt with : SELECT verifyUser('','') AS nombre;
+Got response : 0
+[Info]: [16:08:41] Connection attempt with : SELECT verifyUser('','') AS nombre;
+Got response : 0
+[Info]: [16:09:13] Connection attempt with : SELECT verifyUser('','') AS nombre;
+Got response : 0
+[Info]: [16:09:25] Connection attempt with : SELECT verifyUser('','') AS nombre;
+Got response : 0
+[Info]: [16:09:28] Connection attempt with : SELECT verifyUser('','') AS nombre;
+Got response : 0
+[Info]: [16:10:10] Connection attempt with : SELECT verifyUser('','') AS nombre;
+Got response : 0
+[Info]: [16:10:10] Connection attempt with : SELECT verifyUser('','') AS nombre;
+Got response : 0
+[Info]: [16:10:24] Connection attempt with : SELECT verifyUser('','') AS nombre;
+Got response : 0
+[Info]: [16:11:04] Connection attempt with : SELECT verifyUser('','') AS nombre;
+Got response : 0
+[Info]: [16:15:47] Connection attempt with : SELECT verifyUser('','') AS nombre;
+Got response : 0
+[Info]: [16:15:52] Connection attempt with : SELECT verifyUser('','') AS nombre;
+Got response : 0
+[Info]: [16:16:18] Connection attempt with : SELECT verifyUser('','') AS nombre;
+Got response : 0
+[Info]: [16:16:26] Connection attempt with : SELECT verifyUser('','') AS nombre;
+Got response : 0
+[Info]: [16:16:55] Connection attempt with : SELECT verifyUser('','') AS nombre;
+Got response : 0
+[Info]: [16:17:03] Connection attempt with : SELECT verifyUser('','') AS nombre;
+Got response : 0
+[Info]: [16:17:07] Connection attempt with : SELECT verifyUser('','') AS nombre;
+Got response : 0
+[Info]: [16:22:59] Connection attempt with : SELECT verifyUser('ipodloukaki13@gmail.com','123') AS nombre;
+Got response : 1
+[Info]: [16:22:59] Account data fetched with : SELECT `ID_Comptes`, `Nom`, `Prenom`, `AdresseMail`, `MotDePasse`, `isAdmin`, `isActive` 
+            FROM `comptes` 
+            WHERE AdresseMail = LCASE('ipodloukaki13@gmail.com') AND MotDePasse = SHA('123');
+[Info]: [17:06:31] Connection attempt with : SELECT verifyUser('ipodloukaki13@gmail.com','123') AS nombre;
+Got response : 1
+[Info]: [17:06:31] Account data fetched with : SELECT `ID_Comptes`, `Nom`, `Prenom`, `AdresseMail`, `MotDePasse`, `isAdmin`, `isActive` 
+            FROM `comptes` 
+            WHERE AdresseMail = LCASE('ipodloukaki13@gmail.com') AND MotDePasse = SHA('123');
+[Info]: [17:20:09] Connection attempt with : SELECT verifyUser('ipodloukaki13@gmail.com','123') AS nombre;
+Got response : 1
+[Info]: [17:20:09] Account data fetched with : SELECT `ID_Comptes`, `Nom`, `Prenom`, `AdresseMail`, `MotDePasse`, `isAdmin`, `isActive` 
+            FROM `comptes` 
+            WHERE AdresseMail = LCASE('ipodloukaki13@gmail.com') AND MotDePasse = SHA('123');
+[Info]: [17:20:22] Connection attempt with : SELECT verifyUser('ipodloukaki13@gmail.com','123') AS nombre;
+Got response : 1
+[Info]: [17:20:22] Account data fetched with : SELECT `ID_Comptes`, `Nom`, `Prenom`, `AdresseMail`, `MotDePasse`, `isAdmin`, `isActive` 
+            FROM `comptes` 
+            WHERE AdresseMail = LCASE('ipodloukaki13@gmail.com') AND MotDePasse = SHA('123');
+[Info]: [17:26:51] Connection attempt with : SELECT verifyUser('ipodloukaki13@gmail.com','123') AS nombre;
+Got response : 1
+[Info]: [17:26:51] Account data fetched with : SELECT `ID_Comptes`, `Nom`, `Prenom`, `AdresseMail`, `MotDePasse`, `isAdmin`, `isActive` 
+            FROM `comptes` 
+            WHERE AdresseMail = LCASE('ipodloukaki13@gmail.com') AND MotDePasse = SHA('123');
+[Info]: [17:29:09] Connection attempt with : SELECT verifyUser('ipodloukaki13@gmail.com','123') AS nombre;
+Got response : 1
+[Info]: [17:29:09] Account data fetched with : SELECT `ID_Comptes`, `Nom`, `Prenom`, `AdresseMail`, `MotDePasse`, `isAdmin`, `isActive` 
+            FROM `comptes` 
+            WHERE AdresseMail = LCASE('ipodloukaki13@gmail.com') AND MotDePasse = SHA('123');
+[Info]: [17:30:09] Connection attempt with : SELECT verifyUser('ipodloukaki13@gmail.com','123') AS nombre;
+Got response : 1
+[Info]: [17:30:09] Account data fetched with : SELECT `ID_Comptes`, `Nom`, `Prenom`, `AdresseMail`, `MotDePasse`, `isAdmin`, `isActive` 
+            FROM `comptes` 
+            WHERE AdresseMail = LCASE('ipodloukaki13@gmail.com') AND MotDePasse = SHA('123');
+[Info]: [17:31:49] Connection attempt with : SELECT verifyUser('ipodloukaki13@gmail.com','123') AS nombre;
+Got response : 1
+[Info]: [17:31:49] Account data fetched with : SELECT `ID_Comptes`, `Nom`, `Prenom`, `AdresseMail`, `MotDePasse`, `isAdmin`, `isActive` 
+            FROM `comptes` 
+            WHERE AdresseMail = LCASE('ipodloukaki13@gmail.com') AND MotDePasse = SHA('123');
+[Info]: [17:33:58] Connection attempt with : SELECT verifyUser('ipodloukaki13@gmail.com','123') AS nombre;
+Got response : 1
+[Info]: [17:33:58] Account data fetched with : SELECT `ID_Comptes`, `Nom`, `Prenom`, `AdresseMail`, `MotDePasse`, `isAdmin`, `isActive` 
+            FROM `comptes` 
+            WHERE AdresseMail = LCASE('ipodloukaki13@gmail.com') AND MotDePasse = SHA('123');
+[Info]: [17:33:59] Connection attempt with : SELECT verifyUser('ipodloukaki13@gmail.com','123') AS nombre;
+Got response : 1
+[Info]: [17:33:59] Account data fetched with : SELECT `ID_Comptes`, `Nom`, `Prenom`, `AdresseMail`, `MotDePasse`, `isAdmin`, `isActive` 
+            FROM `comptes` 
+            WHERE AdresseMail = LCASE('ipodloukaki13@gmail.com') AND MotDePasse = SHA('123');
+[Info]: [17:44:54] Connection attempt with : SELECT verifyUser('ipodloukaki13@gmail.com','123') AS nombre;
+Got response : 1
+[Info]: [17:44:54] Account data fetched with : SELECT `ID_Comptes`, `Nom`, `Prenom`, `AdresseMail`, `MotDePasse`, `isAdmin`, `isActive` 
+            FROM `comptes` 
+            WHERE AdresseMail = LCASE('ipodloukaki13@gmail.com') AND MotDePasse = SHA('123');
+[Info]: [18:22:51] Connection attempt with : SELECT verifyUser('ipodloukaki13@gmail.com','123') AS nombre;
+Got response : 1
+[Info]: [18:22:51] Account data fetched with : SELECT `ID_Comptes`, `Nom`, `Prenom`, `AdresseMail`, `MotDePasse`, `isAdmin`, `isActive` 
+            FROM `comptes` 
+            WHERE AdresseMail = LCASE('ipodloukaki13@gmail.com') AND MotDePasse = SHA('123');
+[Info]: [18:49:25] Connection attempt with : SELECT verifyUser('','') AS nombre;
+Got response : 0
+[Info]: [18:49:27] Connection attempt with : SELECT verifyUser('','') AS nombre;
+Got response : 0
+[Info]: [18:49:29] Connection attempt with : SELECT verifyUser('','') AS nombre;
+Got response : 0
+[Info]: [18:51:26] Connection attempt with : SELECT verifyUser('','') AS nombre;
+Got response : 0
+[Info]: [18:51:27] Connection attempt with : SELECT verifyUser('','') AS nombre;
+Got response : 0
+[Info]: [18:52:17] Connection attempt with : SELECT verifyUser('','') AS nombre;
+Got response : 0
+[Info]: [18:52:19] Connection attempt with : SELECT verifyUser('','') AS nombre;
+Got response : 0
+[Info]: [18:52:38] Connection attempt with : SELECT verifyUser('','') AS nombre;
+Got response : 0
+[Info]: [18:52:39] Connection attempt with : SELECT verifyUser('','') AS nombre;
+Got response : 0
+[Info]: [18:53:01] Connection attempt with : SELECT verifyUser('','') AS nombre;
+Got response : 0
+[Info]: [18:53:26] Connection attempt with : SELECT verifyUser('ipodloukaki13@gmail.com','123') AS nombre;
+Got response : 1
+[Info]: [18:53:26] Account data fetched with : SELECT `ID_Comptes`, `Nom`, `Prenom`, `AdresseMail`, `MotDePasse`, `isAdmin`, `isActive` 
+            FROM `comptes` 
+            WHERE AdresseMail = LCASE('ipodloukaki13@gmail.com') AND MotDePasse = SHA('123');
+[Info]: [19:15:46] Connection attempt with : SELECT verifyUser('ipodloukaki13@gmail.com','123') AS nombre;
+Got response : 1
+[Info]: [19:15:46] Account data fetched with : SELECT `ID_Comptes`, `Nom`, `Prenom`, `AdresseMail`, `MotDePasse`, `isAdmin`, `isActive` 
+            FROM `comptes` 
+            WHERE AdresseMail = LCASE('ipodloukaki13@gmail.com') AND MotDePasse = SHA('123');
+[Info]: [19:35:49] Connection attempt with : SELECT verifyUser('ipodloukaki13@gmail.com','123') AS nombre;
+Got response : 1
+[Info]: [19:35:49] Account data fetched with : SELECT `ID_Comptes`, `Nom`, `Prenom`, `AdresseMail`, `MotDePasse`, `isAdmin`, `isActive` 
+            FROM `comptes` 
+            WHERE AdresseMail = LCASE('ipodloukaki13@gmail.com') AND MotDePasse = SHA('123');
+[Info]: [19:36:31] Connection attempt with : SELECT verifyUser('ipodloukaki13@gmail.com','123') AS nombre;
+Got response : 1
+[Info]: [19:36:31] Account data fetched with : SELECT `ID_Comptes`, `Nom`, `Prenom`, `AdresseMail`, `MotDePasse`, `isAdmin`, `isActive` 
+            FROM `comptes` 
+            WHERE AdresseMail = LCASE('ipodloukaki13@gmail.com') AND MotDePasse = SHA('123');
+[Info]: [19:36:52] Connection attempt with : SELECT verifyUser('ipouloukaki13@gmail.com','123') AS nombre;
+Got response : 0
+[Info]: [19:36:54] Connection attempt with : SELECT verifyUser('ipouloukaki13@gmail.com','123') AS nombre;
+Got response : 0
+[Info]: [19:37:02] Connection attempt with : SELECT verifyUser('ipodloukaki13@gmail.com','123') AS nombre;
+Got response : 1
+[Info]: [19:37:02] Account data fetched with : SELECT `ID_Comptes`, `Nom`, `Prenom`, `AdresseMail`, `MotDePasse`, `isAdmin`, `isActive` 
+            FROM `comptes` 
+            WHERE AdresseMail = LCASE('ipodloukaki13@gmail.com') AND MotDePasse = SHA('123');
+[Info]: [19:37:42] Connection attempt with : SELECT verifyUser('ipodloukaki13@gmail.com','123') AS nombre;
+Got response : 1
+[Info]: [19:37:42] Account data fetched with : SELECT `ID_Comptes`, `Nom`, `Prenom`, `AdresseMail`, `MotDePasse`, `isAdmin`, `isActive` 
+            FROM `comptes` 
+            WHERE AdresseMail = LCASE('ipodloukaki13@gmail.com') AND MotDePasse = SHA('123');
+[Info]: [19:40:10] Connection attempt with : SELECT verifyUser('ipodloukaki13@gmail.com','123') AS nombre;
+Got response : 1
+[Info]: [19:40:10] Account data fetched with : SELECT `ID_Comptes`, `Nom`, `Prenom`, `AdresseMail`, `MotDePasse`, `isAdmin`, `isActive` 
+            FROM `comptes` 
+            WHERE AdresseMail = LCASE('ipodloukaki13@gmail.com') AND MotDePasse = SHA('123');
+[Info]: [20:41:15] Connection attempt with : SELECT verifyUser('','') AS nombre;
+Got response : 0
+[Info]: [20:41:31] Connection attempt with : SELECT verifyUser('ipodloukaki13@gmail.com','123') AS nombre;
+Got response : 1
+[Info]: [20:41:31] Account data fetched with : SELECT `ID_Comptes`, `Nom`, `Prenom`, `AdresseMail`, `MotDePasse`, `isAdmin`, `isActive` 
+            FROM `comptes` 
+            WHERE AdresseMail = LCASE('ipodloukaki13@gmail.com') AND MotDePasse = SHA('123');
+[Info]: [20:41:45] User:[3] Sent new form using : 
+   INSERT INTO `reponses`(`ID_Reponses`, `Reponse`, `ID_Question`, `ID_Formulaire`, `ID_Comptes`) VALUES (1,"","3",6,3),(2,"","4",6,3),(3,"","5",6,3),(4,"2000-01-01","6",6,3),(5,"","7",6,3),(6,"","8",6,3),(7,"","9",6,3),(8,"","10",6,3),(9,"","11",6,3),(10,"","12",6,3),(11,"","19",6,3),(12,"Sélectionnez une réponse","1",6,3)
+

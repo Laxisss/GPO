@@ -1,0 +1,10 @@
+[Info]: [12:30:01] Connection attempt with : SELECT verifyUser('lana.langlois@gmail.com','Llorna') AS nombre;
+Got response : 0
+[Info]: [12:30:28] Connection attempt with : SELECT verifyUser('Ipodloukaki13@gmail.com','123') AS nombre;
+Got response : 1
+[Info]: [12:30:28] Account data fetched with : SELECT `ID_Comptes`, `Nom`, `Prenom`, `AdresseMail`, `MotDePasse`, `isAdmin`, `isActive` 
+            FROM `comptes` 
+            WHERE AdresseMail = LCASE('Ipodloukaki13@gmail.com') AND MotDePasse = SHA('123');
+[Info]: [12:36:25] User:[3] Sent new form using : 
+   INSERT INTO `reponses`(`ID_Reponses`, `Reponse`, `ID_Question`, `ID_Formulaire`, `ID_Comptes`) VALUES (1,"Chabouni","3",7,3),(2,"Riyad","4",7,3),(3,"Chabounipro@gmail.com","5",7,3),(4,"2000-01-01","6",7,3),(5,"","7",7,3),(6,"","8",7,3),(7,"","9",7,3),(8,"","10",7,3),(9,"","11",7,3),(10,"","12",7,3),(11,"Sélectionnez une réponse","19",7,3),(12,"Sélectionnez une réponse","1",7,3)
+

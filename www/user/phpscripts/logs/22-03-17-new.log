@@ -1,0 +1,24 @@
+[Info]: [09:43:52] Connection attempt with : SELECT verifyUser('c.dumange@charlespeguymarseille.com','Dcharlotte') AS nombre;
+Got response : 1
+[Info]: [09:43:52] Account data fetched with : SELECT `ID_Comptes`, `Nom`, `Prenom`, `AdresseMail`, `MotDePasse`, `isAdmin`, `isActive` 
+            FROM `comptes` 
+            WHERE AdresseMail = LCASE('c.dumange@charlespeguymarseille.com') AND MotDePasse = SHA('Dcharlotte');
+[Info]: [11:56:01] Connection attempt with : SELECT verifyUser('','') AS nombre;
+Got response : 0
+[Info]: [11:56:13] Connection attempt with : SELECT verifyUser('c.dumange@charlespeguymarseille.com','Dcharlotte') AS nombre;
+Got response : 1
+[Info]: [11:56:13] Account data fetched with : SELECT `ID_Comptes`, `Nom`, `Prenom`, `AdresseMail`, `MotDePasse`, `isAdmin`, `isActive` 
+            FROM `comptes` 
+            WHERE AdresseMail = LCASE('c.dumange@charlespeguymarseille.com') AND MotDePasse = SHA('Dcharlotte');
+[Info]: [17:24:37] Connection attempt with : SELECT verifyUser('i.ambrosino@peguy.org','Aisabelle') AS nombre;
+Got response : 0
+[Info]: [17:27:01] Connection attempt with : SELECT verifyUser('i.ambrosino@peguy.org','Aisabelle') AS nombre;
+Got response : 1
+[Info]: [17:27:01] Account data fetched with : SELECT `ID_Comptes`, `Nom`, `Prenom`, `AdresseMail`, `MotDePasse`, `isAdmin`, `isActive` 
+            FROM `comptes` 
+            WHERE AdresseMail = LCASE('i.ambrosino@peguy.org') AND MotDePasse = SHA('Aisabelle');
+[Info]: [17:27:29] Connection attempt with : SELECT verifyUser('axelle.hennequin@charlespeguymarseille.com','Haxelle') AS nombre;
+Got response : 1
+[Info]: [17:27:29] Account data fetched with : SELECT `ID_Comptes`, `Nom`, `Prenom`, `AdresseMail`, `MotDePasse`, `isAdmin`, `isActive` 
+            FROM `comptes` 
+            WHERE AdresseMail = LCASE('axelle.hennequin@charlespeguymarseille.com') AND MotDePasse = SHA('Haxelle');

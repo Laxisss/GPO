@@ -1,0 +1,11 @@
+[Info]: [14:29:33] Connection attempt with : SELECT verifyUser('ipodloukaki13@gmail.com','123') AS nombre;
+Got response : 1
+[Info]: [14:29:33] Account data fetched with : SELECT `ID_Comptes`, `Nom`, `Prenom`, `AdresseMail`, `MotDePasse`, `isAdmin`, `isActive` 
+            FROM `comptes` 
+            WHERE AdresseMail = LCASE('ipodloukaki13@gmail.com') AND MotDePasse = SHA('123');
+[Error]: [14:32:01] User:[3] Tried to Send with data : 
+   null
+
+[Info]: [14:39:12] User:[3] Sent new form using : 
+   INSERT INTO `reponses`(`ID_Reponses`, `Reponse`, `ID_Question`, `ID_Formulaire`, `ID_Comptes`) VALUES (1,"TEST","3",8,3),(2,"","4",8,3),(3,"","5",8,3),(4,"2000-01-01","6",8,3),(5,"","7",8,3),(6,"","8",8,3),(7,"","9",8,3),(8,"","10",8,3),(9,"","11",8,3),(10,"","12",8,3),(11,"Premiere","19",8,3),(12,"Première Générale","26",8,3),(13,"Grace à une publicité","1",8,3)
+

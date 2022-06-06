@@ -1,0 +1,7 @@
+[Info]: [08:53:20] Connection attempt with : SELECT verifyUser('i.ambrosino@peguy.org','Aisabelle') AS nombre;
+Got response : 1
+[Info]: [08:53:20] Account data fetched with : SELECT `ID_Comptes`, `Nom`, `Prenom`, `AdresseMail`, `MotDePasse`, `isAdmin`, `isActive` 
+            FROM `comptes` 
+            WHERE AdresseMail = LCASE('i.ambrosino@peguy.org') AND MotDePasse = SHA('Aisabelle');
+[Info]: [08:54:07] Connection attempt with : SELECT verifyUser('i.ambrosino@peguy.org','') AS nombre;
+Got response : 0

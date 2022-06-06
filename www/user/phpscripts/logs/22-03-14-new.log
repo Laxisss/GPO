@@ -1,0 +1,556 @@
+[Info]: [10:38:12] Connection attempt with : SELECT verifyUser('ipodloukaki13@gmail.com','123') AS nombre;
+Got response : 1
+[Info]: [10:38:12] Account data fetched with : SELECT `ID_Comptes`, `Nom`, `Prenom`, `AdresseMail`, `MotDePasse`, `isAdmin`, `isActive` 
+            FROM `comptes` 
+            WHERE AdresseMail = LCASE('ipodloukaki13@gmail.com') AND MotDePasse = SHA('123');
+[Info]: [10:39:13] Connection attempt with : SELECT verifyUser('carla.sorbello26@gmail.com','Scarla') AS nombre;
+Got response : 1
+[Info]: [10:39:13] Account data fetched with : SELECT `ID_Comptes`, `Nom`, `Prenom`, `AdresseMail`, `MotDePasse`, `isAdmin`, `isActive` 
+            FROM `comptes` 
+            WHERE AdresseMail = LCASE('carla.sorbello26@gmail.com') AND MotDePasse = SHA('Scarla');
+[Info]: [10:43:22] User:[3] Sent new form using : 
+   INSERT INTO `reponses`(`ID_Reponses`, `Reponse`, `ID_Question`, `ID_Formulaire`, `ID_Comptes`) VALUES (1,"Pellat","3",4,3),(2,"Audran","4",4,3),(3,"Audranpellat@gmail.com","5",4,3),(4,"2005-01-11","6",4,3),(5,"0624650992","7",4,3),(6,"","8",4,3),(7,"anglais","9",4,3),(8,"espagnol","10",4,3),(9,"Tle Générale","11",4,3),(10,"La cordère","12",4,3),(11,"DCG","19",4,3),(12,"1ere année DCG","34",4,3),(13,"Après une recherche sur Internet","1",4,3),(14,"Parcoursup","17",4,3)
+
+[Info]: [10:43:30] User:[38] Sent new form using : 
+   INSERT INTO `reponses`(`ID_Reponses`, `Reponse`, `ID_Question`, `ID_Formulaire`, `ID_Comptes`) VALUES (1,"DE BOYER D EGUILLES","3",11,38),(2,"Mattéo","4",11,38),(3,"sossomargot@gmail.com","5",11,38),(4,"2007-08-21","6",11,38),(5,"06 86 75 91 54","7",11,38),(6,"06 26 27 47 83","8",11,38),(7,"Anglais","9",11,38),(8,"Espagnol","10",11,38),(9,"3ème","11",11,38),(10,"Collège Chateau Forbin","12",11,38),(11,"Seconde","19",11,38),(12,"Seconde Générale","25",11,38),(13,"Par un Salon","1",11,38),(14,"Salon de l&#39;Etudiant (Marseille)","2",11,38)
+
+[Info]: [10:47:03] User:[3] Sent new form using : 
+   INSERT INTO `reponses`(`ID_Reponses`, `Reponse`, `ID_Question`, `ID_Formulaire`, `ID_Comptes`) VALUES (1,"Bocchino","3",5,3),(2,"Eloise","4",5,3),(3,"Eloise.bocchino@outlook.com","5",5,3),(4,"2004-02-05","6",5,3),(5,"0783346472","7",5,3),(6,"","8",5,3),(7,"Anglais","9",5,3),(8,"Italien","10",5,3),(9,"Tle Générale Math-NSI","11",5,3),(10,"St joseph la madeleine","12",5,3),(11,"BTS","19",5,3),(12,"1ere année BTS SIO","28",5,3),(13,"Après une recherche sur Internet","1",5,3),(14,"Parcoursup","17",5,3)
+
+[Info]: [10:47:58] User:[38] Sent new form using : 
+   INSERT INTO `reponses`(`ID_Reponses`, `Reponse`, `ID_Question`, `ID_Formulaire`, `ID_Comptes`) VALUES (1,"ARNAUD","3",12,38),(2,"Rachel","4",12,38),(3,"rarnaud@ndfrance.org","5",12,38),(4,"2004-10-05","6",12,38),(5,"06 34 67 18 14","7",12,38),(6,"","8",12,38),(7,"Anglais","9",12,38),(8,"Espagnol","10",12,38),(9,"1re générale HGGSP - Physique - SVT","11",12,38),(10,"Charles Péguy","12",12,38),(11,"Premiere","19",12,38),(12,"Première Tech STMG","26",12,38),(13,"Autre","1",12,38)
+
+[Info]: [10:52:14] User:[3] Sent new form using : 
+   INSERT INTO `reponses`(`ID_Reponses`, `Reponse`, `ID_Question`, `ID_Formulaire`, `ID_Comptes`) VALUES (1,"Chaix-Bryan","3",6,3),(2,"Oscar","4",6,3),(3,"Oscarlite.chaix","5",6,3),(4,"2003-04-09","6",6,3),(5,"0695052534","7",6,3),(6,"","8",6,3),(7,"Anglais","9",6,3),(8,"Espagnol","10",6,3),(9,"Tle générale HGGSP-LLCE","11",6,3),(10,"Lycée saint-charles","12",6,3),(11,"BTS","19",6,3),(12,"1ere année BTS SAM","29",6,3),(13,"Par du Bouche à oreilles","1",6,3),(14,"Amis","22",6,3)
+
+[Info]: [10:59:41] User:[38] Sent new form using : 
+   INSERT INTO `reponses`(`ID_Reponses`, `Reponse`, `ID_Question`, `ID_Formulaire`, `ID_Comptes`) VALUES (1,"CAUQUIL","3",13,38),(2,"Clémentine","4",13,38),(3,"clementin@gmail.com","5",13,38),(4,"2006-03-27","6",13,38),(5,"0769822665","7",13,38),(6,"","8",13,38),(7,"anglais","9",13,38),(8,"italien","10",13,38),(9,"2de générale","11",13,38),(10,"marseilleveyre","12",13,38),(11,"Premiere","19",13,38),(12,"Première Générale","26",13,38),(13,"Par du Bouche à oreilles","1",13,38),(14,"Amis","22",13,38)
+
+[Info]: [19:01:30] Admin fetched existing forms using : SELECT formulaire.ID_Formulaire, formulaire.ID_Comptes, reponses.Reponse AS NomEleve, CONCAT(comptes.Nom,' ',comptes.Prenom) AS Hote, CONCAT(formulaire.Heure_Envoi,':',formulaire.Minute_Envoi) AS Heure
+  FROM formulaire
+  INNER JOIN comptes ON comptes.ID_Comptes = formulaire.ID_Comptes
+  INNER JOIN reponses ON reponses.ID_Formulaire = formulaire.ID_Formulaire AND reponses.ID_Comptes = formulaire.ID_Comptes
+  GROUP BY formulaire.ID_Formulaire, formulaire.ID_Comptes;
+[Info]: [19:01:30] Admin fetched existing answers using : SELECT formulaire.ID_Formulaire, formulaire.ID_Comptes, questions.Question, reponses.Reponse FROM formulaire
+    INNER JOIN reponses ON reponses.ID_Formulaire = formulaire.ID_Formulaire AND reponses.ID_Comptes = formulaire.ID_Comptes
+    INNER JOIN questions ON questions.ID_Question = reponses.ID_Question WHERE getPrimeQuesOfQuestion(questions.ID_Question) <> 19 AND getPrimeQuesOfQuestion(questions.ID_Question) <> 1;
+[Info]: [19:52:16] Admin fetched existing forms using : SELECT formulaire.ID_Formulaire, formulaire.ID_Comptes, reponses.Reponse AS NomEleve, CONCAT(comptes.Nom,' ',comptes.Prenom) AS Hote, CONCAT(formulaire.Heure_Envoi,':',formulaire.Minute_Envoi) AS Heure
+  FROM formulaire
+  INNER JOIN comptes ON comptes.ID_Comptes = formulaire.ID_Comptes
+  INNER JOIN reponses ON reponses.ID_Formulaire = formulaire.ID_Formulaire AND reponses.ID_Comptes = formulaire.ID_Comptes
+  GROUP BY formulaire.ID_Formulaire, formulaire.ID_Comptes;
+[Info]: [19:52:16] Admin fetched existing answers using : SELECT formulaire.ID_Formulaire, formulaire.ID_Comptes, questions.Question, reponses.Reponse FROM formulaire
+    INNER JOIN reponses ON reponses.ID_Formulaire = formulaire.ID_Formulaire AND reponses.ID_Comptes = formulaire.ID_Comptes
+    INNER JOIN questions ON questions.ID_Question = reponses.ID_Question WHERE getPrimeQuesOfQuestion(questions.ID_Question) <> 19 AND getPrimeQuesOfQuestion(questions.ID_Question) <> 1;
+[Info]: [19:52:16] Admin fetched existing forms using : SELECT formulaire.ID_Formulaire, formulaire.ID_Comptes, reponses.Reponse AS NomEleve, CONCAT(comptes.Nom,' ',comptes.Prenom) AS Hote, CONCAT(formulaire.Heure_Envoi,':',formulaire.Minute_Envoi) AS Heure
+  FROM formulaire
+  INNER JOIN comptes ON comptes.ID_Comptes = formulaire.ID_Comptes
+  INNER JOIN reponses ON reponses.ID_Formulaire = formulaire.ID_Formulaire AND reponses.ID_Comptes = formulaire.ID_Comptes
+  GROUP BY formulaire.ID_Formulaire, formulaire.ID_Comptes;
+[Info]: [19:52:17] Admin fetched existing answers using : SELECT formulaire.ID_Formulaire, formulaire.ID_Comptes, questions.Question, reponses.Reponse FROM formulaire
+    INNER JOIN reponses ON reponses.ID_Formulaire = formulaire.ID_Formulaire AND reponses.ID_Comptes = formulaire.ID_Comptes
+    INNER JOIN questions ON questions.ID_Question = reponses.ID_Question WHERE getPrimeQuesOfQuestion(questions.ID_Question) <> 19 AND getPrimeQuesOfQuestion(questions.ID_Question) <> 1;
+[Info]: [19:52:18] Admin fetched existing forms using : SELECT formulaire.ID_Formulaire, formulaire.ID_Comptes, reponses.Reponse AS NomEleve, CONCAT(comptes.Nom,' ',comptes.Prenom) AS Hote, CONCAT(formulaire.Heure_Envoi,':',formulaire.Minute_Envoi) AS Heure
+  FROM formulaire
+  INNER JOIN comptes ON comptes.ID_Comptes = formulaire.ID_Comptes
+  INNER JOIN reponses ON reponses.ID_Formulaire = formulaire.ID_Formulaire AND reponses.ID_Comptes = formulaire.ID_Comptes
+  GROUP BY formulaire.ID_Formulaire, formulaire.ID_Comptes;
+[Info]: [19:52:18] Admin fetched existing answers using : SELECT formulaire.ID_Formulaire, formulaire.ID_Comptes, questions.Question, reponses.Reponse FROM formulaire
+    INNER JOIN reponses ON reponses.ID_Formulaire = formulaire.ID_Formulaire AND reponses.ID_Comptes = formulaire.ID_Comptes
+    INNER JOIN questions ON questions.ID_Question = reponses.ID_Question WHERE getPrimeQuesOfQuestion(questions.ID_Question) <> 19 AND getPrimeQuesOfQuestion(questions.ID_Question) <> 1;
+[Info]: [19:55:06] Admin fetched existing forms using : SELECT formulaire.ID_Formulaire, formulaire.ID_Comptes, reponses.Reponse AS NomEleve, CONCAT(comptes.Nom,' ',comptes.Prenom) AS Hote, CONCAT(formulaire.Heure_Envoi,':',formulaire.Minute_Envoi) AS Heure
+  FROM formulaire
+  INNER JOIN comptes ON comptes.ID_Comptes = formulaire.ID_Comptes
+  INNER JOIN reponses ON reponses.ID_Formulaire = formulaire.ID_Formulaire AND reponses.ID_Comptes = formulaire.ID_Comptes
+  GROUP BY formulaire.ID_Formulaire, formulaire.ID_Comptes;
+[Info]: [19:55:06] Admin fetched existing answers using : SELECT formulaire.ID_Formulaire, formulaire.ID_Comptes, questions.Question, reponses.Reponse FROM formulaire
+    INNER JOIN reponses ON reponses.ID_Formulaire = formulaire.ID_Formulaire AND reponses.ID_Comptes = formulaire.ID_Comptes
+    INNER JOIN questions ON questions.ID_Question = reponses.ID_Question WHERE getPrimeQuesOfQuestion(questions.ID_Question) <> 19 AND getPrimeQuesOfQuestion(questions.ID_Question) <> 1;
+[Info]: [19:55:06] Admin fetched existing forms using : SELECT formulaire.ID_Formulaire, formulaire.ID_Comptes, reponses.Reponse AS NomEleve, CONCAT(comptes.Nom,' ',comptes.Prenom) AS Hote, CONCAT(formulaire.Heure_Envoi,':',formulaire.Minute_Envoi) AS Heure
+  FROM formulaire
+  INNER JOIN comptes ON comptes.ID_Comptes = formulaire.ID_Comptes
+  INNER JOIN reponses ON reponses.ID_Formulaire = formulaire.ID_Formulaire AND reponses.ID_Comptes = formulaire.ID_Comptes
+  GROUP BY formulaire.ID_Formulaire, formulaire.ID_Comptes;
+[Info]: [19:55:06] Admin fetched existing answers using : SELECT formulaire.ID_Formulaire, formulaire.ID_Comptes, questions.Question, reponses.Reponse FROM formulaire
+    INNER JOIN reponses ON reponses.ID_Formulaire = formulaire.ID_Formulaire AND reponses.ID_Comptes = formulaire.ID_Comptes
+    INNER JOIN questions ON questions.ID_Question = reponses.ID_Question WHERE getPrimeQuesOfQuestion(questions.ID_Question) <> 19 AND getPrimeQuesOfQuestion(questions.ID_Question) <> 1;
+[Info]: [19:55:10] Admin fetched existing forms using : SELECT formulaire.ID_Formulaire, formulaire.ID_Comptes, reponses.Reponse AS NomEleve, CONCAT(comptes.Nom,' ',comptes.Prenom) AS Hote, CONCAT(formulaire.Heure_Envoi,':',formulaire.Minute_Envoi) AS Heure
+  FROM formulaire
+  INNER JOIN comptes ON comptes.ID_Comptes = formulaire.ID_Comptes
+  INNER JOIN reponses ON reponses.ID_Formulaire = formulaire.ID_Formulaire AND reponses.ID_Comptes = formulaire.ID_Comptes
+  GROUP BY formulaire.ID_Formulaire, formulaire.ID_Comptes;
+[Info]: [19:55:10] Admin fetched existing answers using : SELECT formulaire.ID_Formulaire, formulaire.ID_Comptes, questions.Question, reponses.Reponse FROM formulaire
+    INNER JOIN reponses ON reponses.ID_Formulaire = formulaire.ID_Formulaire AND reponses.ID_Comptes = formulaire.ID_Comptes
+    INNER JOIN questions ON questions.ID_Question = reponses.ID_Question WHERE getPrimeQuesOfQuestion(questions.ID_Question) <> 19 AND getPrimeQuesOfQuestion(questions.ID_Question) <> 1;
+[Info]: [19:55:11] Admin fetched existing forms using : SELECT formulaire.ID_Formulaire, formulaire.ID_Comptes, reponses.Reponse AS NomEleve, CONCAT(comptes.Nom,' ',comptes.Prenom) AS Hote, CONCAT(formulaire.Heure_Envoi,':',formulaire.Minute_Envoi) AS Heure
+  FROM formulaire
+  INNER JOIN comptes ON comptes.ID_Comptes = formulaire.ID_Comptes
+  INNER JOIN reponses ON reponses.ID_Formulaire = formulaire.ID_Formulaire AND reponses.ID_Comptes = formulaire.ID_Comptes
+  GROUP BY formulaire.ID_Formulaire, formulaire.ID_Comptes;
+[Info]: [19:55:11] Admin fetched existing answers using : SELECT formulaire.ID_Formulaire, formulaire.ID_Comptes, questions.Question, reponses.Reponse FROM formulaire
+    INNER JOIN reponses ON reponses.ID_Formulaire = formulaire.ID_Formulaire AND reponses.ID_Comptes = formulaire.ID_Comptes
+    INNER JOIN questions ON questions.ID_Question = reponses.ID_Question WHERE getPrimeQuesOfQuestion(questions.ID_Question) <> 19 AND getPrimeQuesOfQuestion(questions.ID_Question) <> 1;
+[Info]: [19:56:27] Admin fetched existing forms using : SELECT formulaire.ID_Formulaire, formulaire.ID_Comptes, reponses.Reponse AS NomEleve, CONCAT(comptes.Nom,' ',comptes.Prenom) AS Hote, CONCAT(formulaire.Heure_Envoi,':',formulaire.Minute_Envoi) AS Heure
+  FROM formulaire
+  INNER JOIN comptes ON comptes.ID_Comptes = formulaire.ID_Comptes
+  INNER JOIN reponses ON reponses.ID_Formulaire = formulaire.ID_Formulaire AND reponses.ID_Comptes = formulaire.ID_Comptes
+  GROUP BY formulaire.ID_Formulaire, formulaire.ID_Comptes;
+[Info]: [19:56:27] Admin fetched existing answers using : SELECT formulaire.ID_Formulaire, formulaire.ID_Comptes, questions.Question, reponses.Reponse FROM formulaire
+    INNER JOIN reponses ON reponses.ID_Formulaire = formulaire.ID_Formulaire AND reponses.ID_Comptes = formulaire.ID_Comptes
+    INNER JOIN questions ON questions.ID_Question = reponses.ID_Question WHERE getPrimeQuesOfQuestion(questions.ID_Question) <> 19 AND getPrimeQuesOfQuestion(questions.ID_Question) <> 1;
+[Info]: [19:56:27] Admin fetched existing forms using : SELECT formulaire.ID_Formulaire, formulaire.ID_Comptes, reponses.Reponse AS NomEleve, CONCAT(comptes.Nom,' ',comptes.Prenom) AS Hote, CONCAT(formulaire.Heure_Envoi,':',formulaire.Minute_Envoi) AS Heure
+  FROM formulaire
+  INNER JOIN comptes ON comptes.ID_Comptes = formulaire.ID_Comptes
+  INNER JOIN reponses ON reponses.ID_Formulaire = formulaire.ID_Formulaire AND reponses.ID_Comptes = formulaire.ID_Comptes
+  GROUP BY formulaire.ID_Formulaire, formulaire.ID_Comptes;
+[Info]: [19:56:28] Admin fetched existing answers using : SELECT formulaire.ID_Formulaire, formulaire.ID_Comptes, questions.Question, reponses.Reponse FROM formulaire
+    INNER JOIN reponses ON reponses.ID_Formulaire = formulaire.ID_Formulaire AND reponses.ID_Comptes = formulaire.ID_Comptes
+    INNER JOIN questions ON questions.ID_Question = reponses.ID_Question WHERE getPrimeQuesOfQuestion(questions.ID_Question) <> 19 AND getPrimeQuesOfQuestion(questions.ID_Question) <> 1;
+[Info]: [19:56:33] Admin fetched existing forms using : SELECT formulaire.ID_Formulaire, formulaire.ID_Comptes, reponses.Reponse AS NomEleve, CONCAT(comptes.Nom,' ',comptes.Prenom) AS Hote, CONCAT(formulaire.Heure_Envoi,':',formulaire.Minute_Envoi) AS Heure
+  FROM formulaire
+  INNER JOIN comptes ON comptes.ID_Comptes = formulaire.ID_Comptes
+  INNER JOIN reponses ON reponses.ID_Formulaire = formulaire.ID_Formulaire AND reponses.ID_Comptes = formulaire.ID_Comptes
+  GROUP BY formulaire.ID_Formulaire, formulaire.ID_Comptes;
+[Info]: [19:56:34] Admin fetched existing answers using : SELECT formulaire.ID_Formulaire, formulaire.ID_Comptes, questions.Question, reponses.Reponse FROM formulaire
+    INNER JOIN reponses ON reponses.ID_Formulaire = formulaire.ID_Formulaire AND reponses.ID_Comptes = formulaire.ID_Comptes
+    INNER JOIN questions ON questions.ID_Question = reponses.ID_Question WHERE getPrimeQuesOfQuestion(questions.ID_Question) <> 19 AND getPrimeQuesOfQuestion(questions.ID_Question) <> 1;
+[Info]: [19:56:34] Admin fetched existing forms using : SELECT formulaire.ID_Formulaire, formulaire.ID_Comptes, reponses.Reponse AS NomEleve, CONCAT(comptes.Nom,' ',comptes.Prenom) AS Hote, CONCAT(formulaire.Heure_Envoi,':',formulaire.Minute_Envoi) AS Heure
+  FROM formulaire
+  INNER JOIN comptes ON comptes.ID_Comptes = formulaire.ID_Comptes
+  INNER JOIN reponses ON reponses.ID_Formulaire = formulaire.ID_Formulaire AND reponses.ID_Comptes = formulaire.ID_Comptes
+  GROUP BY formulaire.ID_Formulaire, formulaire.ID_Comptes;
+[Info]: [19:56:34] Admin fetched existing answers using : SELECT formulaire.ID_Formulaire, formulaire.ID_Comptes, questions.Question, reponses.Reponse FROM formulaire
+    INNER JOIN reponses ON reponses.ID_Formulaire = formulaire.ID_Formulaire AND reponses.ID_Comptes = formulaire.ID_Comptes
+    INNER JOIN questions ON questions.ID_Question = reponses.ID_Question WHERE getPrimeQuesOfQuestion(questions.ID_Question) <> 19 AND getPrimeQuesOfQuestion(questions.ID_Question) <> 1;
+[Info]: [19:56:35] Admin fetched existing forms using : SELECT formulaire.ID_Formulaire, formulaire.ID_Comptes, reponses.Reponse AS NomEleve, CONCAT(comptes.Nom,' ',comptes.Prenom) AS Hote, CONCAT(formulaire.Heure_Envoi,':',formulaire.Minute_Envoi) AS Heure
+  FROM formulaire
+  INNER JOIN comptes ON comptes.ID_Comptes = formulaire.ID_Comptes
+  INNER JOIN reponses ON reponses.ID_Formulaire = formulaire.ID_Formulaire AND reponses.ID_Comptes = formulaire.ID_Comptes
+  GROUP BY formulaire.ID_Formulaire, formulaire.ID_Comptes;
+[Info]: [19:56:35] Admin fetched existing answers using : SELECT formulaire.ID_Formulaire, formulaire.ID_Comptes, questions.Question, reponses.Reponse FROM formulaire
+    INNER JOIN reponses ON reponses.ID_Formulaire = formulaire.ID_Formulaire AND reponses.ID_Comptes = formulaire.ID_Comptes
+    INNER JOIN questions ON questions.ID_Question = reponses.ID_Question WHERE getPrimeQuesOfQuestion(questions.ID_Question) <> 19 AND getPrimeQuesOfQuestion(questions.ID_Question) <> 1;
+[Info]: [19:56:36] Admin fetched existing forms using : SELECT formulaire.ID_Formulaire, formulaire.ID_Comptes, reponses.Reponse AS NomEleve, CONCAT(comptes.Nom,' ',comptes.Prenom) AS Hote, CONCAT(formulaire.Heure_Envoi,':',formulaire.Minute_Envoi) AS Heure
+  FROM formulaire
+  INNER JOIN comptes ON comptes.ID_Comptes = formulaire.ID_Comptes
+  INNER JOIN reponses ON reponses.ID_Formulaire = formulaire.ID_Formulaire AND reponses.ID_Comptes = formulaire.ID_Comptes
+  GROUP BY formulaire.ID_Formulaire, formulaire.ID_Comptes;
+[Info]: [19:56:36] Admin fetched existing answers using : SELECT formulaire.ID_Formulaire, formulaire.ID_Comptes, questions.Question, reponses.Reponse FROM formulaire
+    INNER JOIN reponses ON reponses.ID_Formulaire = formulaire.ID_Formulaire AND reponses.ID_Comptes = formulaire.ID_Comptes
+    INNER JOIN questions ON questions.ID_Question = reponses.ID_Question WHERE getPrimeQuesOfQuestion(questions.ID_Question) <> 19 AND getPrimeQuesOfQuestion(questions.ID_Question) <> 1;
+[Info]: [19:57:13] Admin fetched existing forms using : SELECT formulaire.ID_Formulaire, formulaire.ID_Comptes, reponses.Reponse AS NomEleve, CONCAT(comptes.Nom,' ',comptes.Prenom) AS Hote, CONCAT(formulaire.Heure_Envoi,':',formulaire.Minute_Envoi) AS Heure
+  FROM formulaire
+  INNER JOIN comptes ON comptes.ID_Comptes = formulaire.ID_Comptes
+  INNER JOIN reponses ON reponses.ID_Formulaire = formulaire.ID_Formulaire AND reponses.ID_Comptes = formulaire.ID_Comptes
+  GROUP BY formulaire.ID_Formulaire, formulaire.ID_Comptes;
+[Info]: [19:57:13] Admin fetched existing answers using : SELECT formulaire.ID_Formulaire, formulaire.ID_Comptes, questions.Question, reponses.Reponse FROM formulaire
+    INNER JOIN reponses ON reponses.ID_Formulaire = formulaire.ID_Formulaire AND reponses.ID_Comptes = formulaire.ID_Comptes
+    INNER JOIN questions ON questions.ID_Question = reponses.ID_Question WHERE getPrimeQuesOfQuestion(questions.ID_Question) <> 19 AND getPrimeQuesOfQuestion(questions.ID_Question) <> 1;
+[Info]: [19:57:13] Admin fetched existing forms using : SELECT formulaire.ID_Formulaire, formulaire.ID_Comptes, reponses.Reponse AS NomEleve, CONCAT(comptes.Nom,' ',comptes.Prenom) AS Hote, CONCAT(formulaire.Heure_Envoi,':',formulaire.Minute_Envoi) AS Heure
+  FROM formulaire
+  INNER JOIN comptes ON comptes.ID_Comptes = formulaire.ID_Comptes
+  INNER JOIN reponses ON reponses.ID_Formulaire = formulaire.ID_Formulaire AND reponses.ID_Comptes = formulaire.ID_Comptes
+  GROUP BY formulaire.ID_Formulaire, formulaire.ID_Comptes;
+[Info]: [19:57:13] Admin fetched existing answers using : SELECT formulaire.ID_Formulaire, formulaire.ID_Comptes, questions.Question, reponses.Reponse FROM formulaire
+    INNER JOIN reponses ON reponses.ID_Formulaire = formulaire.ID_Formulaire AND reponses.ID_Comptes = formulaire.ID_Comptes
+    INNER JOIN questions ON questions.ID_Question = reponses.ID_Question WHERE getPrimeQuesOfQuestion(questions.ID_Question) <> 19 AND getPrimeQuesOfQuestion(questions.ID_Question) <> 1;
+[Info]: [19:59:35] Admin fetched existing forms using : SELECT formulaire.ID_Formulaire, formulaire.ID_Comptes, reponses.Reponse AS NomEleve, CONCAT(comptes.Nom,' ',comptes.Prenom) AS Hote, CONCAT(formulaire.Heure_Envoi,':',formulaire.Minute_Envoi) AS Heure
+  FROM formulaire
+  INNER JOIN comptes ON comptes.ID_Comptes = formulaire.ID_Comptes
+  INNER JOIN reponses ON reponses.ID_Formulaire = formulaire.ID_Formulaire AND reponses.ID_Comptes = formulaire.ID_Comptes
+  GROUP BY formulaire.ID_Formulaire, formulaire.ID_Comptes;
+[Info]: [19:59:35] Admin fetched existing answers using : SELECT formulaire.ID_Formulaire, formulaire.ID_Comptes, questions.Question, reponses.Reponse FROM formulaire
+    INNER JOIN reponses ON reponses.ID_Formulaire = formulaire.ID_Formulaire AND reponses.ID_Comptes = formulaire.ID_Comptes
+    INNER JOIN questions ON questions.ID_Question = reponses.ID_Question WHERE getPrimeQuesOfQuestion(questions.ID_Question) <> 19 AND getPrimeQuesOfQuestion(questions.ID_Question) <> 1;
+[Info]: [19:59:35] Admin fetched existing forms using : SELECT formulaire.ID_Formulaire, formulaire.ID_Comptes, reponses.Reponse AS NomEleve, CONCAT(comptes.Nom,' ',comptes.Prenom) AS Hote, CONCAT(formulaire.Heure_Envoi,':',formulaire.Minute_Envoi) AS Heure
+  FROM formulaire
+  INNER JOIN comptes ON comptes.ID_Comptes = formulaire.ID_Comptes
+  INNER JOIN reponses ON reponses.ID_Formulaire = formulaire.ID_Formulaire AND reponses.ID_Comptes = formulaire.ID_Comptes
+  GROUP BY formulaire.ID_Formulaire, formulaire.ID_Comptes;
+[Info]: [19:59:35] Admin fetched existing answers using : SELECT formulaire.ID_Formulaire, formulaire.ID_Comptes, questions.Question, reponses.Reponse FROM formulaire
+    INNER JOIN reponses ON reponses.ID_Formulaire = formulaire.ID_Formulaire AND reponses.ID_Comptes = formulaire.ID_Comptes
+    INNER JOIN questions ON questions.ID_Question = reponses.ID_Question WHERE getPrimeQuesOfQuestion(questions.ID_Question) <> 19 AND getPrimeQuesOfQuestion(questions.ID_Question) <> 1;
+[Info]: [19:59:58] Admin fetched existing forms using : SELECT formulaire.ID_Formulaire, formulaire.ID_Comptes, reponses.Reponse AS NomEleve, CONCAT(comptes.Nom,' ',comptes.Prenom) AS Hote, CONCAT(formulaire.Heure_Envoi,':',formulaire.Minute_Envoi) AS Heure
+  FROM formulaire
+  INNER JOIN comptes ON comptes.ID_Comptes = formulaire.ID_Comptes
+  INNER JOIN reponses ON reponses.ID_Formulaire = formulaire.ID_Formulaire AND reponses.ID_Comptes = formulaire.ID_Comptes
+  GROUP BY formulaire.ID_Formulaire, formulaire.ID_Comptes;
+[Info]: [19:59:58] Admin fetched existing answers using : SELECT formulaire.ID_Formulaire, formulaire.ID_Comptes, questions.Question, reponses.Reponse FROM formulaire
+    INNER JOIN reponses ON reponses.ID_Formulaire = formulaire.ID_Formulaire AND reponses.ID_Comptes = formulaire.ID_Comptes
+    INNER JOIN questions ON questions.ID_Question = reponses.ID_Question WHERE getPrimeQuesOfQuestion(questions.ID_Question) <> 19 AND getPrimeQuesOfQuestion(questions.ID_Question) <> 1;
+[Info]: [19:59:58] Admin fetched existing forms using : SELECT formulaire.ID_Formulaire, formulaire.ID_Comptes, reponses.Reponse AS NomEleve, CONCAT(comptes.Nom,' ',comptes.Prenom) AS Hote, CONCAT(formulaire.Heure_Envoi,':',formulaire.Minute_Envoi) AS Heure
+  FROM formulaire
+  INNER JOIN comptes ON comptes.ID_Comptes = formulaire.ID_Comptes
+  INNER JOIN reponses ON reponses.ID_Formulaire = formulaire.ID_Formulaire AND reponses.ID_Comptes = formulaire.ID_Comptes
+  GROUP BY formulaire.ID_Formulaire, formulaire.ID_Comptes;
+[Info]: [19:59:58] Admin fetched existing answers using : SELECT formulaire.ID_Formulaire, formulaire.ID_Comptes, questions.Question, reponses.Reponse FROM formulaire
+    INNER JOIN reponses ON reponses.ID_Formulaire = formulaire.ID_Formulaire AND reponses.ID_Comptes = formulaire.ID_Comptes
+    INNER JOIN questions ON questions.ID_Question = reponses.ID_Question WHERE getPrimeQuesOfQuestion(questions.ID_Question) <> 19 AND getPrimeQuesOfQuestion(questions.ID_Question) <> 1;
+[Info]: [20:01:04] Admin fetched existing forms using : SELECT formulaire.ID_Formulaire, formulaire.ID_Comptes, reponses.Reponse AS NomEleve, CONCAT(comptes.Nom,' ',comptes.Prenom) AS Hote, CONCAT(formulaire.Heure_Envoi,':',formulaire.Minute_Envoi) AS Heure
+  FROM formulaire
+  INNER JOIN comptes ON comptes.ID_Comptes = formulaire.ID_Comptes
+  INNER JOIN reponses ON reponses.ID_Formulaire = formulaire.ID_Formulaire AND reponses.ID_Comptes = formulaire.ID_Comptes
+  GROUP BY formulaire.ID_Formulaire, formulaire.ID_Comptes;
+[Info]: [20:01:04] Admin fetched existing answers using : SELECT formulaire.ID_Formulaire, formulaire.ID_Comptes, questions.Question, reponses.Reponse FROM formulaire
+    INNER JOIN reponses ON reponses.ID_Formulaire = formulaire.ID_Formulaire AND reponses.ID_Comptes = formulaire.ID_Comptes
+    INNER JOIN questions ON questions.ID_Question = reponses.ID_Question WHERE getPrimeQuesOfQuestion(questions.ID_Question) <> 19 AND getPrimeQuesOfQuestion(questions.ID_Question) <> 1;
+[Info]: [20:01:04] Admin fetched existing forms using : SELECT formulaire.ID_Formulaire, formulaire.ID_Comptes, reponses.Reponse AS NomEleve, CONCAT(comptes.Nom,' ',comptes.Prenom) AS Hote, CONCAT(formulaire.Heure_Envoi,':',formulaire.Minute_Envoi) AS Heure
+  FROM formulaire
+  INNER JOIN comptes ON comptes.ID_Comptes = formulaire.ID_Comptes
+  INNER JOIN reponses ON reponses.ID_Formulaire = formulaire.ID_Formulaire AND reponses.ID_Comptes = formulaire.ID_Comptes
+  GROUP BY formulaire.ID_Formulaire, formulaire.ID_Comptes;
+[Info]: [20:01:04] Admin fetched existing answers using : SELECT formulaire.ID_Formulaire, formulaire.ID_Comptes, questions.Question, reponses.Reponse FROM formulaire
+    INNER JOIN reponses ON reponses.ID_Formulaire = formulaire.ID_Formulaire AND reponses.ID_Comptes = formulaire.ID_Comptes
+    INNER JOIN questions ON questions.ID_Question = reponses.ID_Question WHERE getPrimeQuesOfQuestion(questions.ID_Question) <> 19 AND getPrimeQuesOfQuestion(questions.ID_Question) <> 1;
+[Info]: [20:01:07] Admin fetched existing forms using : SELECT formulaire.ID_Formulaire, formulaire.ID_Comptes, reponses.Reponse AS NomEleve, CONCAT(comptes.Nom,' ',comptes.Prenom) AS Hote, CONCAT(formulaire.Heure_Envoi,':',formulaire.Minute_Envoi) AS Heure
+  FROM formulaire
+  INNER JOIN comptes ON comptes.ID_Comptes = formulaire.ID_Comptes
+  INNER JOIN reponses ON reponses.ID_Formulaire = formulaire.ID_Formulaire AND reponses.ID_Comptes = formulaire.ID_Comptes
+  GROUP BY formulaire.ID_Formulaire, formulaire.ID_Comptes;
+[Info]: [20:01:07] Admin fetched existing answers using : SELECT formulaire.ID_Formulaire, formulaire.ID_Comptes, questions.Question, reponses.Reponse FROM formulaire
+    INNER JOIN reponses ON reponses.ID_Formulaire = formulaire.ID_Formulaire AND reponses.ID_Comptes = formulaire.ID_Comptes
+    INNER JOIN questions ON questions.ID_Question = reponses.ID_Question WHERE getPrimeQuesOfQuestion(questions.ID_Question) <> 19 AND getPrimeQuesOfQuestion(questions.ID_Question) <> 1;
+[Info]: [20:01:07] Admin fetched existing forms using : SELECT formulaire.ID_Formulaire, formulaire.ID_Comptes, reponses.Reponse AS NomEleve, CONCAT(comptes.Nom,' ',comptes.Prenom) AS Hote, CONCAT(formulaire.Heure_Envoi,':',formulaire.Minute_Envoi) AS Heure
+  FROM formulaire
+  INNER JOIN comptes ON comptes.ID_Comptes = formulaire.ID_Comptes
+  INNER JOIN reponses ON reponses.ID_Formulaire = formulaire.ID_Formulaire AND reponses.ID_Comptes = formulaire.ID_Comptes
+  GROUP BY formulaire.ID_Formulaire, formulaire.ID_Comptes;
+[Info]: [20:01:07] Admin fetched existing answers using : SELECT formulaire.ID_Formulaire, formulaire.ID_Comptes, questions.Question, reponses.Reponse FROM formulaire
+    INNER JOIN reponses ON reponses.ID_Formulaire = formulaire.ID_Formulaire AND reponses.ID_Comptes = formulaire.ID_Comptes
+    INNER JOIN questions ON questions.ID_Question = reponses.ID_Question WHERE getPrimeQuesOfQuestion(questions.ID_Question) <> 19 AND getPrimeQuesOfQuestion(questions.ID_Question) <> 1;
+[Info]: [20:02:03] Admin fetched existing forms using : SELECT formulaire.ID_Formulaire, formulaire.ID_Comptes, reponses.Reponse AS NomEleve, CONCAT(comptes.Nom,' ',comptes.Prenom) AS Hote, CONCAT(formulaire.Heure_Envoi,':',formulaire.Minute_Envoi) AS Heure
+  FROM formulaire
+  INNER JOIN comptes ON comptes.ID_Comptes = formulaire.ID_Comptes
+  INNER JOIN reponses ON reponses.ID_Formulaire = formulaire.ID_Formulaire AND reponses.ID_Comptes = formulaire.ID_Comptes
+  GROUP BY formulaire.ID_Formulaire, formulaire.ID_Comptes;
+[Info]: [20:02:04] Admin fetched existing answers using : SELECT formulaire.ID_Formulaire, formulaire.ID_Comptes, questions.Question, reponses.Reponse FROM formulaire
+    INNER JOIN reponses ON reponses.ID_Formulaire = formulaire.ID_Formulaire AND reponses.ID_Comptes = formulaire.ID_Comptes
+    INNER JOIN questions ON questions.ID_Question = reponses.ID_Question WHERE getPrimeQuesOfQuestion(questions.ID_Question) <> 19 AND getPrimeQuesOfQuestion(questions.ID_Question) <> 1;
+[Info]: [20:02:04] Admin fetched existing forms using : SELECT formulaire.ID_Formulaire, formulaire.ID_Comptes, reponses.Reponse AS NomEleve, CONCAT(comptes.Nom,' ',comptes.Prenom) AS Hote, CONCAT(formulaire.Heure_Envoi,':',formulaire.Minute_Envoi) AS Heure
+  FROM formulaire
+  INNER JOIN comptes ON comptes.ID_Comptes = formulaire.ID_Comptes
+  INNER JOIN reponses ON reponses.ID_Formulaire = formulaire.ID_Formulaire AND reponses.ID_Comptes = formulaire.ID_Comptes
+  GROUP BY formulaire.ID_Formulaire, formulaire.ID_Comptes;
+[Info]: [20:02:04] Admin fetched existing answers using : SELECT formulaire.ID_Formulaire, formulaire.ID_Comptes, questions.Question, reponses.Reponse FROM formulaire
+    INNER JOIN reponses ON reponses.ID_Formulaire = formulaire.ID_Formulaire AND reponses.ID_Comptes = formulaire.ID_Comptes
+    INNER JOIN questions ON questions.ID_Question = reponses.ID_Question WHERE getPrimeQuesOfQuestion(questions.ID_Question) <> 19 AND getPrimeQuesOfQuestion(questions.ID_Question) <> 1;
+[Info]: [20:02:06] Admin fetched existing forms using : SELECT formulaire.ID_Formulaire, formulaire.ID_Comptes, reponses.Reponse AS NomEleve, CONCAT(comptes.Nom,' ',comptes.Prenom) AS Hote, CONCAT(formulaire.Heure_Envoi,':',formulaire.Minute_Envoi) AS Heure
+  FROM formulaire
+  INNER JOIN comptes ON comptes.ID_Comptes = formulaire.ID_Comptes
+  INNER JOIN reponses ON reponses.ID_Formulaire = formulaire.ID_Formulaire AND reponses.ID_Comptes = formulaire.ID_Comptes
+  GROUP BY formulaire.ID_Formulaire, formulaire.ID_Comptes;
+[Info]: [20:02:07] Admin fetched existing answers using : SELECT formulaire.ID_Formulaire, formulaire.ID_Comptes, questions.Question, reponses.Reponse FROM formulaire
+    INNER JOIN reponses ON reponses.ID_Formulaire = formulaire.ID_Formulaire AND reponses.ID_Comptes = formulaire.ID_Comptes
+    INNER JOIN questions ON questions.ID_Question = reponses.ID_Question WHERE getPrimeQuesOfQuestion(questions.ID_Question) <> 19 AND getPrimeQuesOfQuestion(questions.ID_Question) <> 1;
+[Info]: [20:02:10] Admin fetched existing forms using : SELECT formulaire.ID_Formulaire, formulaire.ID_Comptes, reponses.Reponse AS NomEleve, CONCAT(comptes.Nom,' ',comptes.Prenom) AS Hote, CONCAT(formulaire.Heure_Envoi,':',formulaire.Minute_Envoi) AS Heure
+  FROM formulaire
+  INNER JOIN comptes ON comptes.ID_Comptes = formulaire.ID_Comptes
+  INNER JOIN reponses ON reponses.ID_Formulaire = formulaire.ID_Formulaire AND reponses.ID_Comptes = formulaire.ID_Comptes
+  GROUP BY formulaire.ID_Formulaire, formulaire.ID_Comptes;
+[Info]: [20:02:11] Admin fetched existing answers using : SELECT formulaire.ID_Formulaire, formulaire.ID_Comptes, questions.Question, reponses.Reponse FROM formulaire
+    INNER JOIN reponses ON reponses.ID_Formulaire = formulaire.ID_Formulaire AND reponses.ID_Comptes = formulaire.ID_Comptes
+    INNER JOIN questions ON questions.ID_Question = reponses.ID_Question WHERE getPrimeQuesOfQuestion(questions.ID_Question) <> 19 AND getPrimeQuesOfQuestion(questions.ID_Question) <> 1;
+[Info]: [20:02:11] Admin fetched existing forms using : SELECT formulaire.ID_Formulaire, formulaire.ID_Comptes, reponses.Reponse AS NomEleve, CONCAT(comptes.Nom,' ',comptes.Prenom) AS Hote, CONCAT(formulaire.Heure_Envoi,':',formulaire.Minute_Envoi) AS Heure
+  FROM formulaire
+  INNER JOIN comptes ON comptes.ID_Comptes = formulaire.ID_Comptes
+  INNER JOIN reponses ON reponses.ID_Formulaire = formulaire.ID_Formulaire AND reponses.ID_Comptes = formulaire.ID_Comptes
+  GROUP BY formulaire.ID_Formulaire, formulaire.ID_Comptes;
+[Info]: [20:02:11] Admin fetched existing answers using : SELECT formulaire.ID_Formulaire, formulaire.ID_Comptes, questions.Question, reponses.Reponse FROM formulaire
+    INNER JOIN reponses ON reponses.ID_Formulaire = formulaire.ID_Formulaire AND reponses.ID_Comptes = formulaire.ID_Comptes
+    INNER JOIN questions ON questions.ID_Question = reponses.ID_Question WHERE getPrimeQuesOfQuestion(questions.ID_Question) <> 19 AND getPrimeQuesOfQuestion(questions.ID_Question) <> 1;
+[Info]: [20:02:33] Admin fetched existing forms using : SELECT formulaire.ID_Formulaire, formulaire.ID_Comptes, reponses.Reponse AS NomEleve, CONCAT(comptes.Nom,' ',comptes.Prenom) AS Hote, CONCAT(formulaire.Heure_Envoi,':',formulaire.Minute_Envoi) AS Heure
+  FROM formulaire
+  INNER JOIN comptes ON comptes.ID_Comptes = formulaire.ID_Comptes
+  INNER JOIN reponses ON reponses.ID_Formulaire = formulaire.ID_Formulaire AND reponses.ID_Comptes = formulaire.ID_Comptes
+  GROUP BY formulaire.ID_Formulaire, formulaire.ID_Comptes;
+[Info]: [20:02:34] Admin fetched existing answers using : SELECT formulaire.ID_Formulaire, formulaire.ID_Comptes, questions.Question, reponses.Reponse FROM formulaire
+    INNER JOIN reponses ON reponses.ID_Formulaire = formulaire.ID_Formulaire AND reponses.ID_Comptes = formulaire.ID_Comptes
+    INNER JOIN questions ON questions.ID_Question = reponses.ID_Question WHERE getPrimeQuesOfQuestion(questions.ID_Question) <> 19 AND getPrimeQuesOfQuestion(questions.ID_Question) <> 1;
+[Info]: [20:02:34] Admin fetched existing forms using : SELECT formulaire.ID_Formulaire, formulaire.ID_Comptes, reponses.Reponse AS NomEleve, CONCAT(comptes.Nom,' ',comptes.Prenom) AS Hote, CONCAT(formulaire.Heure_Envoi,':',formulaire.Minute_Envoi) AS Heure
+  FROM formulaire
+  INNER JOIN comptes ON comptes.ID_Comptes = formulaire.ID_Comptes
+  INNER JOIN reponses ON reponses.ID_Formulaire = formulaire.ID_Formulaire AND reponses.ID_Comptes = formulaire.ID_Comptes
+  GROUP BY formulaire.ID_Formulaire, formulaire.ID_Comptes;
+[Info]: [20:02:34] Admin fetched existing answers using : SELECT formulaire.ID_Formulaire, formulaire.ID_Comptes, questions.Question, reponses.Reponse FROM formulaire
+    INNER JOIN reponses ON reponses.ID_Formulaire = formulaire.ID_Formulaire AND reponses.ID_Comptes = formulaire.ID_Comptes
+    INNER JOIN questions ON questions.ID_Question = reponses.ID_Question WHERE getPrimeQuesOfQuestion(questions.ID_Question) <> 19 AND getPrimeQuesOfQuestion(questions.ID_Question) <> 1;
+[Info]: [20:04:31] Admin fetched existing forms using : SELECT formulaire.ID_Formulaire, formulaire.ID_Comptes, reponses.Reponse AS NomEleve, CONCAT(comptes.Nom,' ',comptes.Prenom) AS Hote, CONCAT(formulaire.Heure_Envoi,':',formulaire.Minute_Envoi) AS Heure
+  FROM formulaire
+  INNER JOIN comptes ON comptes.ID_Comptes = formulaire.ID_Comptes
+  INNER JOIN reponses ON reponses.ID_Formulaire = formulaire.ID_Formulaire AND reponses.ID_Comptes = formulaire.ID_Comptes
+  GROUP BY formulaire.ID_Formulaire, formulaire.ID_Comptes;
+[Info]: [20:04:31] Admin fetched existing answers using : SELECT formulaire.ID_Formulaire, formulaire.ID_Comptes, questions.Question, reponses.Reponse FROM formulaire
+    INNER JOIN reponses ON reponses.ID_Formulaire = formulaire.ID_Formulaire AND reponses.ID_Comptes = formulaire.ID_Comptes
+    INNER JOIN questions ON questions.ID_Question = reponses.ID_Question WHERE getPrimeQuesOfQuestion(questions.ID_Question) <> 19 AND getPrimeQuesOfQuestion(questions.ID_Question) <> 1;
+[Info]: [20:04:31] Admin fetched existing forms using : SELECT formulaire.ID_Formulaire, formulaire.ID_Comptes, reponses.Reponse AS NomEleve, CONCAT(comptes.Nom,' ',comptes.Prenom) AS Hote, CONCAT(formulaire.Heure_Envoi,':',formulaire.Minute_Envoi) AS Heure
+  FROM formulaire
+  INNER JOIN comptes ON comptes.ID_Comptes = formulaire.ID_Comptes
+  INNER JOIN reponses ON reponses.ID_Formulaire = formulaire.ID_Formulaire AND reponses.ID_Comptes = formulaire.ID_Comptes
+  GROUP BY formulaire.ID_Formulaire, formulaire.ID_Comptes;
+[Info]: [20:04:31] Admin fetched existing answers using : SELECT formulaire.ID_Formulaire, formulaire.ID_Comptes, questions.Question, reponses.Reponse FROM formulaire
+    INNER JOIN reponses ON reponses.ID_Formulaire = formulaire.ID_Formulaire AND reponses.ID_Comptes = formulaire.ID_Comptes
+    INNER JOIN questions ON questions.ID_Question = reponses.ID_Question WHERE getPrimeQuesOfQuestion(questions.ID_Question) <> 19 AND getPrimeQuesOfQuestion(questions.ID_Question) <> 1;
+[Info]: [20:04:34] Admin fetched existing forms using : SELECT formulaire.ID_Formulaire, formulaire.ID_Comptes, reponses.Reponse AS NomEleve, CONCAT(comptes.Nom,' ',comptes.Prenom) AS Hote, CONCAT(formulaire.Heure_Envoi,':',formulaire.Minute_Envoi) AS Heure
+  FROM formulaire
+  INNER JOIN comptes ON comptes.ID_Comptes = formulaire.ID_Comptes
+  INNER JOIN reponses ON reponses.ID_Formulaire = formulaire.ID_Formulaire AND reponses.ID_Comptes = formulaire.ID_Comptes
+  GROUP BY formulaire.ID_Formulaire, formulaire.ID_Comptes;
+[Info]: [20:04:34] Admin fetched existing answers using : SELECT formulaire.ID_Formulaire, formulaire.ID_Comptes, questions.Question, reponses.Reponse FROM formulaire
+    INNER JOIN reponses ON reponses.ID_Formulaire = formulaire.ID_Formulaire AND reponses.ID_Comptes = formulaire.ID_Comptes
+    INNER JOIN questions ON questions.ID_Question = reponses.ID_Question WHERE getPrimeQuesOfQuestion(questions.ID_Question) <> 19 AND getPrimeQuesOfQuestion(questions.ID_Question) <> 1;
+[Info]: [20:04:34] Admin fetched existing forms using : SELECT formulaire.ID_Formulaire, formulaire.ID_Comptes, reponses.Reponse AS NomEleve, CONCAT(comptes.Nom,' ',comptes.Prenom) AS Hote, CONCAT(formulaire.Heure_Envoi,':',formulaire.Minute_Envoi) AS Heure
+  FROM formulaire
+  INNER JOIN comptes ON comptes.ID_Comptes = formulaire.ID_Comptes
+  INNER JOIN reponses ON reponses.ID_Formulaire = formulaire.ID_Formulaire AND reponses.ID_Comptes = formulaire.ID_Comptes
+  GROUP BY formulaire.ID_Formulaire, formulaire.ID_Comptes;
+[Info]: [20:04:35] Admin fetched existing answers using : SELECT formulaire.ID_Formulaire, formulaire.ID_Comptes, questions.Question, reponses.Reponse FROM formulaire
+    INNER JOIN reponses ON reponses.ID_Formulaire = formulaire.ID_Formulaire AND reponses.ID_Comptes = formulaire.ID_Comptes
+    INNER JOIN questions ON questions.ID_Question = reponses.ID_Question WHERE getPrimeQuesOfQuestion(questions.ID_Question) <> 19 AND getPrimeQuesOfQuestion(questions.ID_Question) <> 1;
+[Info]: [20:04:54] Admin fetched existing forms using : SELECT formulaire.ID_Formulaire, formulaire.ID_Comptes, reponses.Reponse AS NomEleve, CONCAT(comptes.Nom,' ',comptes.Prenom) AS Hote, CONCAT(formulaire.Heure_Envoi,':',formulaire.Minute_Envoi) AS Heure
+  FROM formulaire
+  INNER JOIN comptes ON comptes.ID_Comptes = formulaire.ID_Comptes
+  INNER JOIN reponses ON reponses.ID_Formulaire = formulaire.ID_Formulaire AND reponses.ID_Comptes = formulaire.ID_Comptes
+  GROUP BY formulaire.ID_Formulaire, formulaire.ID_Comptes;
+[Info]: [20:04:55] Admin fetched existing answers using : SELECT formulaire.ID_Formulaire, formulaire.ID_Comptes, questions.Question, reponses.Reponse FROM formulaire
+    INNER JOIN reponses ON reponses.ID_Formulaire = formulaire.ID_Formulaire AND reponses.ID_Comptes = formulaire.ID_Comptes
+    INNER JOIN questions ON questions.ID_Question = reponses.ID_Question WHERE getPrimeQuesOfQuestion(questions.ID_Question) <> 19 AND getPrimeQuesOfQuestion(questions.ID_Question) <> 1;
+[Info]: [20:04:55] Admin fetched existing forms using : SELECT formulaire.ID_Formulaire, formulaire.ID_Comptes, reponses.Reponse AS NomEleve, CONCAT(comptes.Nom,' ',comptes.Prenom) AS Hote, CONCAT(formulaire.Heure_Envoi,':',formulaire.Minute_Envoi) AS Heure
+  FROM formulaire
+  INNER JOIN comptes ON comptes.ID_Comptes = formulaire.ID_Comptes
+  INNER JOIN reponses ON reponses.ID_Formulaire = formulaire.ID_Formulaire AND reponses.ID_Comptes = formulaire.ID_Comptes
+  GROUP BY formulaire.ID_Formulaire, formulaire.ID_Comptes;
+[Info]: [20:04:55] Admin fetched existing answers using : SELECT formulaire.ID_Formulaire, formulaire.ID_Comptes, questions.Question, reponses.Reponse FROM formulaire
+    INNER JOIN reponses ON reponses.ID_Formulaire = formulaire.ID_Formulaire AND reponses.ID_Comptes = formulaire.ID_Comptes
+    INNER JOIN questions ON questions.ID_Question = reponses.ID_Question WHERE getPrimeQuesOfQuestion(questions.ID_Question) <> 19 AND getPrimeQuesOfQuestion(questions.ID_Question) <> 1;
+[Info]: [20:05:02] Admin fetched existing forms using : SELECT formulaire.ID_Formulaire, formulaire.ID_Comptes, reponses.Reponse AS NomEleve, CONCAT(comptes.Nom,' ',comptes.Prenom) AS Hote, CONCAT(formulaire.Heure_Envoi,':',formulaire.Minute_Envoi) AS Heure
+  FROM formulaire
+  INNER JOIN comptes ON comptes.ID_Comptes = formulaire.ID_Comptes
+  INNER JOIN reponses ON reponses.ID_Formulaire = formulaire.ID_Formulaire AND reponses.ID_Comptes = formulaire.ID_Comptes
+  GROUP BY formulaire.ID_Formulaire, formulaire.ID_Comptes;
+[Info]: [20:05:03] Admin fetched existing answers using : SELECT formulaire.ID_Formulaire, formulaire.ID_Comptes, questions.Question, reponses.Reponse FROM formulaire
+    INNER JOIN reponses ON reponses.ID_Formulaire = formulaire.ID_Formulaire AND reponses.ID_Comptes = formulaire.ID_Comptes
+    INNER JOIN questions ON questions.ID_Question = reponses.ID_Question WHERE getPrimeQuesOfQuestion(questions.ID_Question) <> 19 AND getPrimeQuesOfQuestion(questions.ID_Question) <> 1;
+[Info]: [20:05:03] Admin fetched existing forms using : SELECT formulaire.ID_Formulaire, formulaire.ID_Comptes, reponses.Reponse AS NomEleve, CONCAT(comptes.Nom,' ',comptes.Prenom) AS Hote, CONCAT(formulaire.Heure_Envoi,':',formulaire.Minute_Envoi) AS Heure
+  FROM formulaire
+  INNER JOIN comptes ON comptes.ID_Comptes = formulaire.ID_Comptes
+  INNER JOIN reponses ON reponses.ID_Formulaire = formulaire.ID_Formulaire AND reponses.ID_Comptes = formulaire.ID_Comptes
+  GROUP BY formulaire.ID_Formulaire, formulaire.ID_Comptes;
+[Info]: [20:05:03] Admin fetched existing answers using : SELECT formulaire.ID_Formulaire, formulaire.ID_Comptes, questions.Question, reponses.Reponse FROM formulaire
+    INNER JOIN reponses ON reponses.ID_Formulaire = formulaire.ID_Formulaire AND reponses.ID_Comptes = formulaire.ID_Comptes
+    INNER JOIN questions ON questions.ID_Question = reponses.ID_Question WHERE getPrimeQuesOfQuestion(questions.ID_Question) <> 19 AND getPrimeQuesOfQuestion(questions.ID_Question) <> 1;
+[Info]: [20:05:20] Admin fetched existing forms using : SELECT formulaire.ID_Formulaire, formulaire.ID_Comptes, reponses.Reponse AS NomEleve, CONCAT(comptes.Nom,' ',comptes.Prenom) AS Hote, CONCAT(formulaire.Heure_Envoi,':',formulaire.Minute_Envoi) AS Heure
+  FROM formulaire
+  INNER JOIN comptes ON comptes.ID_Comptes = formulaire.ID_Comptes
+  INNER JOIN reponses ON reponses.ID_Formulaire = formulaire.ID_Formulaire AND reponses.ID_Comptes = formulaire.ID_Comptes
+  GROUP BY formulaire.ID_Formulaire, formulaire.ID_Comptes;
+[Info]: [20:05:21] Admin fetched existing answers using : SELECT formulaire.ID_Formulaire, formulaire.ID_Comptes, questions.Question, reponses.Reponse FROM formulaire
+    INNER JOIN reponses ON reponses.ID_Formulaire = formulaire.ID_Formulaire AND reponses.ID_Comptes = formulaire.ID_Comptes
+    INNER JOIN questions ON questions.ID_Question = reponses.ID_Question WHERE getPrimeQuesOfQuestion(questions.ID_Question) <> 19 AND getPrimeQuesOfQuestion(questions.ID_Question) <> 1;
+[Info]: [20:05:21] Admin fetched existing forms using : SELECT formulaire.ID_Formulaire, formulaire.ID_Comptes, reponses.Reponse AS NomEleve, CONCAT(comptes.Nom,' ',comptes.Prenom) AS Hote, CONCAT(formulaire.Heure_Envoi,':',formulaire.Minute_Envoi) AS Heure
+  FROM formulaire
+  INNER JOIN comptes ON comptes.ID_Comptes = formulaire.ID_Comptes
+  INNER JOIN reponses ON reponses.ID_Formulaire = formulaire.ID_Formulaire AND reponses.ID_Comptes = formulaire.ID_Comptes
+  GROUP BY formulaire.ID_Formulaire, formulaire.ID_Comptes;
+[Info]: [20:05:21] Admin fetched existing answers using : SELECT formulaire.ID_Formulaire, formulaire.ID_Comptes, questions.Question, reponses.Reponse FROM formulaire
+    INNER JOIN reponses ON reponses.ID_Formulaire = formulaire.ID_Formulaire AND reponses.ID_Comptes = formulaire.ID_Comptes
+    INNER JOIN questions ON questions.ID_Question = reponses.ID_Question WHERE getPrimeQuesOfQuestion(questions.ID_Question) <> 19 AND getPrimeQuesOfQuestion(questions.ID_Question) <> 1;
+[Info]: [20:05:28] Admin fetched existing forms using : SELECT formulaire.ID_Formulaire, formulaire.ID_Comptes, reponses.Reponse AS NomEleve, CONCAT(comptes.Nom,' ',comptes.Prenom) AS Hote, CONCAT(formulaire.Heure_Envoi,':',formulaire.Minute_Envoi) AS Heure
+  FROM formulaire
+  INNER JOIN comptes ON comptes.ID_Comptes = formulaire.ID_Comptes
+  INNER JOIN reponses ON reponses.ID_Formulaire = formulaire.ID_Formulaire AND reponses.ID_Comptes = formulaire.ID_Comptes
+  GROUP BY formulaire.ID_Formulaire, formulaire.ID_Comptes;
+[Info]: [20:05:28] Admin fetched existing answers using : SELECT formulaire.ID_Formulaire, formulaire.ID_Comptes, questions.Question, reponses.Reponse FROM formulaire
+    INNER JOIN reponses ON reponses.ID_Formulaire = formulaire.ID_Formulaire AND reponses.ID_Comptes = formulaire.ID_Comptes
+    INNER JOIN questions ON questions.ID_Question = reponses.ID_Question WHERE getPrimeQuesOfQuestion(questions.ID_Question) <> 19 AND getPrimeQuesOfQuestion(questions.ID_Question) <> 1;
+[Info]: [20:05:28] Admin fetched existing forms using : SELECT formulaire.ID_Formulaire, formulaire.ID_Comptes, reponses.Reponse AS NomEleve, CONCAT(comptes.Nom,' ',comptes.Prenom) AS Hote, CONCAT(formulaire.Heure_Envoi,':',formulaire.Minute_Envoi) AS Heure
+  FROM formulaire
+  INNER JOIN comptes ON comptes.ID_Comptes = formulaire.ID_Comptes
+  INNER JOIN reponses ON reponses.ID_Formulaire = formulaire.ID_Formulaire AND reponses.ID_Comptes = formulaire.ID_Comptes
+  GROUP BY formulaire.ID_Formulaire, formulaire.ID_Comptes;
+[Info]: [20:05:29] Admin fetched existing answers using : SELECT formulaire.ID_Formulaire, formulaire.ID_Comptes, questions.Question, reponses.Reponse FROM formulaire
+    INNER JOIN reponses ON reponses.ID_Formulaire = formulaire.ID_Formulaire AND reponses.ID_Comptes = formulaire.ID_Comptes
+    INNER JOIN questions ON questions.ID_Question = reponses.ID_Question WHERE getPrimeQuesOfQuestion(questions.ID_Question) <> 19 AND getPrimeQuesOfQuestion(questions.ID_Question) <> 1;
+[Info]: [20:05:47] Admin fetched existing forms using : SELECT formulaire.ID_Formulaire, formulaire.ID_Comptes, reponses.Reponse AS NomEleve, CONCAT(comptes.Nom,' ',comptes.Prenom) AS Hote, CONCAT(formulaire.Heure_Envoi,':',formulaire.Minute_Envoi) AS Heure
+  FROM formulaire
+  INNER JOIN comptes ON comptes.ID_Comptes = formulaire.ID_Comptes
+  INNER JOIN reponses ON reponses.ID_Formulaire = formulaire.ID_Formulaire AND reponses.ID_Comptes = formulaire.ID_Comptes
+  GROUP BY formulaire.ID_Formulaire, formulaire.ID_Comptes;
+[Info]: [20:05:48] Admin fetched existing answers using : SELECT formulaire.ID_Formulaire, formulaire.ID_Comptes, questions.Question, reponses.Reponse FROM formulaire
+    INNER JOIN reponses ON reponses.ID_Formulaire = formulaire.ID_Formulaire AND reponses.ID_Comptes = formulaire.ID_Comptes
+    INNER JOIN questions ON questions.ID_Question = reponses.ID_Question WHERE getPrimeQuesOfQuestion(questions.ID_Question) <> 19 AND getPrimeQuesOfQuestion(questions.ID_Question) <> 1;
+[Info]: [20:05:48] Admin fetched existing forms using : SELECT formulaire.ID_Formulaire, formulaire.ID_Comptes, reponses.Reponse AS NomEleve, CONCAT(comptes.Nom,' ',comptes.Prenom) AS Hote, CONCAT(formulaire.Heure_Envoi,':',formulaire.Minute_Envoi) AS Heure
+  FROM formulaire
+  INNER JOIN comptes ON comptes.ID_Comptes = formulaire.ID_Comptes
+  INNER JOIN reponses ON reponses.ID_Formulaire = formulaire.ID_Formulaire AND reponses.ID_Comptes = formulaire.ID_Comptes
+  GROUP BY formulaire.ID_Formulaire, formulaire.ID_Comptes;
+[Info]: [20:05:48] Admin fetched existing answers using : SELECT formulaire.ID_Formulaire, formulaire.ID_Comptes, questions.Question, reponses.Reponse FROM formulaire
+    INNER JOIN reponses ON reponses.ID_Formulaire = formulaire.ID_Formulaire AND reponses.ID_Comptes = formulaire.ID_Comptes
+    INNER JOIN questions ON questions.ID_Question = reponses.ID_Question WHERE getPrimeQuesOfQuestion(questions.ID_Question) <> 19 AND getPrimeQuesOfQuestion(questions.ID_Question) <> 1;
+[Info]: [20:05:53] Admin fetched existing forms using : SELECT formulaire.ID_Formulaire, formulaire.ID_Comptes, reponses.Reponse AS NomEleve, CONCAT(comptes.Nom,' ',comptes.Prenom) AS Hote, CONCAT(formulaire.Heure_Envoi,':',formulaire.Minute_Envoi) AS Heure
+  FROM formulaire
+  INNER JOIN comptes ON comptes.ID_Comptes = formulaire.ID_Comptes
+  INNER JOIN reponses ON reponses.ID_Formulaire = formulaire.ID_Formulaire AND reponses.ID_Comptes = formulaire.ID_Comptes
+  GROUP BY formulaire.ID_Formulaire, formulaire.ID_Comptes;
+[Info]: [20:05:53] Admin fetched existing answers using : SELECT formulaire.ID_Formulaire, formulaire.ID_Comptes, questions.Question, reponses.Reponse FROM formulaire
+    INNER JOIN reponses ON reponses.ID_Formulaire = formulaire.ID_Formulaire AND reponses.ID_Comptes = formulaire.ID_Comptes
+    INNER JOIN questions ON questions.ID_Question = reponses.ID_Question WHERE getPrimeQuesOfQuestion(questions.ID_Question) <> 19 AND getPrimeQuesOfQuestion(questions.ID_Question) <> 1;
+[Info]: [20:05:53] Admin fetched existing forms using : SELECT formulaire.ID_Formulaire, formulaire.ID_Comptes, reponses.Reponse AS NomEleve, CONCAT(comptes.Nom,' ',comptes.Prenom) AS Hote, CONCAT(formulaire.Heure_Envoi,':',formulaire.Minute_Envoi) AS Heure
+  FROM formulaire
+  INNER JOIN comptes ON comptes.ID_Comptes = formulaire.ID_Comptes
+  INNER JOIN reponses ON reponses.ID_Formulaire = formulaire.ID_Formulaire AND reponses.ID_Comptes = formulaire.ID_Comptes
+  GROUP BY formulaire.ID_Formulaire, formulaire.ID_Comptes;
+[Info]: [20:05:53] Admin fetched existing answers using : SELECT formulaire.ID_Formulaire, formulaire.ID_Comptes, questions.Question, reponses.Reponse FROM formulaire
+    INNER JOIN reponses ON reponses.ID_Formulaire = formulaire.ID_Formulaire AND reponses.ID_Comptes = formulaire.ID_Comptes
+    INNER JOIN questions ON questions.ID_Question = reponses.ID_Question WHERE getPrimeQuesOfQuestion(questions.ID_Question) <> 19 AND getPrimeQuesOfQuestion(questions.ID_Question) <> 1;
+[Info]: [20:06:02] Admin fetched existing forms using : SELECT formulaire.ID_Formulaire, formulaire.ID_Comptes, reponses.Reponse AS NomEleve, CONCAT(comptes.Nom,' ',comptes.Prenom) AS Hote, CONCAT(formulaire.Heure_Envoi,':',formulaire.Minute_Envoi) AS Heure
+  FROM formulaire
+  INNER JOIN comptes ON comptes.ID_Comptes = formulaire.ID_Comptes
+  INNER JOIN reponses ON reponses.ID_Formulaire = formulaire.ID_Formulaire AND reponses.ID_Comptes = formulaire.ID_Comptes
+  GROUP BY formulaire.ID_Formulaire, formulaire.ID_Comptes;
+[Info]: [20:06:03] Admin fetched existing answers using : SELECT formulaire.ID_Formulaire, formulaire.ID_Comptes, questions.Question, reponses.Reponse FROM formulaire
+    INNER JOIN reponses ON reponses.ID_Formulaire = formulaire.ID_Formulaire AND reponses.ID_Comptes = formulaire.ID_Comptes
+    INNER JOIN questions ON questions.ID_Question = reponses.ID_Question WHERE getPrimeQuesOfQuestion(questions.ID_Question) <> 19 AND getPrimeQuesOfQuestion(questions.ID_Question) <> 1;
+[Info]: [20:06:03] Admin fetched existing forms using : SELECT formulaire.ID_Formulaire, formulaire.ID_Comptes, reponses.Reponse AS NomEleve, CONCAT(comptes.Nom,' ',comptes.Prenom) AS Hote, CONCAT(formulaire.Heure_Envoi,':',formulaire.Minute_Envoi) AS Heure
+  FROM formulaire
+  INNER JOIN comptes ON comptes.ID_Comptes = formulaire.ID_Comptes
+  INNER JOIN reponses ON reponses.ID_Formulaire = formulaire.ID_Formulaire AND reponses.ID_Comptes = formulaire.ID_Comptes
+  GROUP BY formulaire.ID_Formulaire, formulaire.ID_Comptes;
+[Info]: [20:06:03] Admin fetched existing answers using : SELECT formulaire.ID_Formulaire, formulaire.ID_Comptes, questions.Question, reponses.Reponse FROM formulaire
+    INNER JOIN reponses ON reponses.ID_Formulaire = formulaire.ID_Formulaire AND reponses.ID_Comptes = formulaire.ID_Comptes
+    INNER JOIN questions ON questions.ID_Question = reponses.ID_Question WHERE getPrimeQuesOfQuestion(questions.ID_Question) <> 19 AND getPrimeQuesOfQuestion(questions.ID_Question) <> 1;
+[Info]: [20:06:45] Admin fetched existing forms using : SELECT formulaire.ID_Formulaire, formulaire.ID_Comptes, reponses.Reponse AS NomEleve, CONCAT(comptes.Nom,' ',comptes.Prenom) AS Hote, CONCAT(formulaire.Heure_Envoi,':',formulaire.Minute_Envoi) AS Heure
+  FROM formulaire
+  INNER JOIN comptes ON comptes.ID_Comptes = formulaire.ID_Comptes
+  INNER JOIN reponses ON reponses.ID_Formulaire = formulaire.ID_Formulaire AND reponses.ID_Comptes = formulaire.ID_Comptes
+  GROUP BY formulaire.ID_Formulaire, formulaire.ID_Comptes;
+[Info]: [20:06:46] Admin fetched existing answers using : SELECT formulaire.ID_Formulaire, formulaire.ID_Comptes, questions.Question, reponses.Reponse FROM formulaire
+    INNER JOIN reponses ON reponses.ID_Formulaire = formulaire.ID_Formulaire AND reponses.ID_Comptes = formulaire.ID_Comptes
+    INNER JOIN questions ON questions.ID_Question = reponses.ID_Question WHERE getPrimeQuesOfQuestion(questions.ID_Question) <> 19 AND getPrimeQuesOfQuestion(questions.ID_Question) <> 1;
+[Info]: [20:06:46] Admin fetched existing forms using : SELECT formulaire.ID_Formulaire, formulaire.ID_Comptes, reponses.Reponse AS NomEleve, CONCAT(comptes.Nom,' ',comptes.Prenom) AS Hote, CONCAT(formulaire.Heure_Envoi,':',formulaire.Minute_Envoi) AS Heure
+  FROM formulaire
+  INNER JOIN comptes ON comptes.ID_Comptes = formulaire.ID_Comptes
+  INNER JOIN reponses ON reponses.ID_Formulaire = formulaire.ID_Formulaire AND reponses.ID_Comptes = formulaire.ID_Comptes
+  GROUP BY formulaire.ID_Formulaire, formulaire.ID_Comptes;
+[Info]: [20:06:46] Admin fetched existing answers using : SELECT formulaire.ID_Formulaire, formulaire.ID_Comptes, questions.Question, reponses.Reponse FROM formulaire
+    INNER JOIN reponses ON reponses.ID_Formulaire = formulaire.ID_Formulaire AND reponses.ID_Comptes = formulaire.ID_Comptes
+    INNER JOIN questions ON questions.ID_Question = reponses.ID_Question WHERE getPrimeQuesOfQuestion(questions.ID_Question) <> 19 AND getPrimeQuesOfQuestion(questions.ID_Question) <> 1;
+[Info]: [20:07:38] Admin fetched existing forms using : SELECT formulaire.ID_Formulaire, formulaire.ID_Comptes, reponses.Reponse AS NomEleve, CONCAT(comptes.Nom,' ',comptes.Prenom) AS Hote, CONCAT(formulaire.Heure_Envoi,':',formulaire.Minute_Envoi) AS Heure
+  FROM formulaire
+  INNER JOIN comptes ON comptes.ID_Comptes = formulaire.ID_Comptes
+  INNER JOIN reponses ON reponses.ID_Formulaire = formulaire.ID_Formulaire AND reponses.ID_Comptes = formulaire.ID_Comptes
+  GROUP BY formulaire.ID_Formulaire, formulaire.ID_Comptes;
+[Info]: [20:07:39] Admin fetched existing answers using : SELECT formulaire.ID_Formulaire, formulaire.ID_Comptes, questions.Question, reponses.Reponse FROM formulaire
+    INNER JOIN reponses ON reponses.ID_Formulaire = formulaire.ID_Formulaire AND reponses.ID_Comptes = formulaire.ID_Comptes
+    INNER JOIN questions ON questions.ID_Question = reponses.ID_Question WHERE getPrimeQuesOfQuestion(questions.ID_Question) <> 19 AND getPrimeQuesOfQuestion(questions.ID_Question) <> 1;
+[Info]: [20:07:39] Admin fetched existing forms using : SELECT formulaire.ID_Formulaire, formulaire.ID_Comptes, reponses.Reponse AS NomEleve, CONCAT(comptes.Nom,' ',comptes.Prenom) AS Hote, CONCAT(formulaire.Heure_Envoi,':',formulaire.Minute_Envoi) AS Heure
+  FROM formulaire
+  INNER JOIN comptes ON comptes.ID_Comptes = formulaire.ID_Comptes
+  INNER JOIN reponses ON reponses.ID_Formulaire = formulaire.ID_Formulaire AND reponses.ID_Comptes = formulaire.ID_Comptes
+  GROUP BY formulaire.ID_Formulaire, formulaire.ID_Comptes;
+[Info]: [20:07:39] Admin fetched existing answers using : SELECT formulaire.ID_Formulaire, formulaire.ID_Comptes, questions.Question, reponses.Reponse FROM formulaire
+    INNER JOIN reponses ON reponses.ID_Formulaire = formulaire.ID_Formulaire AND reponses.ID_Comptes = formulaire.ID_Comptes
+    INNER JOIN questions ON questions.ID_Question = reponses.ID_Question WHERE getPrimeQuesOfQuestion(questions.ID_Question) <> 19 AND getPrimeQuesOfQuestion(questions.ID_Question) <> 1;
+[Info]: [20:09:06] Admin fetched existing forms using : SELECT formulaire.ID_Formulaire, formulaire.ID_Comptes, reponses.Reponse AS NomEleve, CONCAT(comptes.Nom,' ',comptes.Prenom) AS Hote, CONCAT(formulaire.Heure_Envoi,':',formulaire.Minute_Envoi) AS Heure
+  FROM formulaire
+  INNER JOIN comptes ON comptes.ID_Comptes = formulaire.ID_Comptes
+  INNER JOIN reponses ON reponses.ID_Formulaire = formulaire.ID_Formulaire AND reponses.ID_Comptes = formulaire.ID_Comptes
+  GROUP BY formulaire.ID_Formulaire, formulaire.ID_Comptes;
+[Info]: [20:09:06] Admin fetched existing answers using : SELECT formulaire.ID_Formulaire, formulaire.ID_Comptes, questions.Question, reponses.Reponse FROM formulaire
+    INNER JOIN reponses ON reponses.ID_Formulaire = formulaire.ID_Formulaire AND reponses.ID_Comptes = formulaire.ID_Comptes
+    INNER JOIN questions ON questions.ID_Question = reponses.ID_Question WHERE getPrimeQuesOfQuestion(questions.ID_Question) <> 19 AND getPrimeQuesOfQuestion(questions.ID_Question) <> 1;
+[Info]: [20:09:06] Admin fetched existing forms using : SELECT formulaire.ID_Formulaire, formulaire.ID_Comptes, reponses.Reponse AS NomEleve, CONCAT(comptes.Nom,' ',comptes.Prenom) AS Hote, CONCAT(formulaire.Heure_Envoi,':',formulaire.Minute_Envoi) AS Heure
+  FROM formulaire
+  INNER JOIN comptes ON comptes.ID_Comptes = formulaire.ID_Comptes
+  INNER JOIN reponses ON reponses.ID_Formulaire = formulaire.ID_Formulaire AND reponses.ID_Comptes = formulaire.ID_Comptes
+  GROUP BY formulaire.ID_Formulaire, formulaire.ID_Comptes;
+[Info]: [20:09:06] Admin fetched existing answers using : SELECT formulaire.ID_Formulaire, formulaire.ID_Comptes, questions.Question, reponses.Reponse FROM formulaire
+    INNER JOIN reponses ON reponses.ID_Formulaire = formulaire.ID_Formulaire AND reponses.ID_Comptes = formulaire.ID_Comptes
+    INNER JOIN questions ON questions.ID_Question = reponses.ID_Question WHERE getPrimeQuesOfQuestion(questions.ID_Question) <> 19 AND getPrimeQuesOfQuestion(questions.ID_Question) <> 1;
+[Info]: [20:09:10] Admin fetched existing forms using : SELECT formulaire.ID_Formulaire, formulaire.ID_Comptes, reponses.Reponse AS NomEleve, CONCAT(comptes.Nom,' ',comptes.Prenom) AS Hote, CONCAT(formulaire.Heure_Envoi,':',formulaire.Minute_Envoi) AS Heure
+  FROM formulaire
+  INNER JOIN comptes ON comptes.ID_Comptes = formulaire.ID_Comptes
+  INNER JOIN reponses ON reponses.ID_Formulaire = formulaire.ID_Formulaire AND reponses.ID_Comptes = formulaire.ID_Comptes
+  GROUP BY formulaire.ID_Formulaire, formulaire.ID_Comptes;
+[Info]: [20:09:11] Admin fetched existing answers using : SELECT formulaire.ID_Formulaire, formulaire.ID_Comptes, questions.Question, reponses.Reponse FROM formulaire
+    INNER JOIN reponses ON reponses.ID_Formulaire = formulaire.ID_Formulaire AND reponses.ID_Comptes = formulaire.ID_Comptes
+    INNER JOIN questions ON questions.ID_Question = reponses.ID_Question WHERE getPrimeQuesOfQuestion(questions.ID_Question) <> 19 AND getPrimeQuesOfQuestion(questions.ID_Question) <> 1;
+[Info]: [20:09:12] Admin fetched existing forms using : SELECT formulaire.ID_Formulaire, formulaire.ID_Comptes, reponses.Reponse AS NomEleve, CONCAT(comptes.Nom,' ',comptes.Prenom) AS Hote, CONCAT(formulaire.Heure_Envoi,':',formulaire.Minute_Envoi) AS Heure
+  FROM formulaire
+  INNER JOIN comptes ON comptes.ID_Comptes = formulaire.ID_Comptes
+  INNER JOIN reponses ON reponses.ID_Formulaire = formulaire.ID_Formulaire AND reponses.ID_Comptes = formulaire.ID_Comptes
+  GROUP BY formulaire.ID_Formulaire, formulaire.ID_Comptes;
+[Info]: [20:09:13] Admin fetched existing answers using : SELECT formulaire.ID_Formulaire, formulaire.ID_Comptes, questions.Question, reponses.Reponse FROM formulaire
+    INNER JOIN reponses ON reponses.ID_Formulaire = formulaire.ID_Formulaire AND reponses.ID_Comptes = formulaire.ID_Comptes
+    INNER JOIN questions ON questions.ID_Question = reponses.ID_Question WHERE getPrimeQuesOfQuestion(questions.ID_Question) <> 19 AND getPrimeQuesOfQuestion(questions.ID_Question) <> 1;
+[Info]: [20:09:13] Admin fetched existing forms using : SELECT formulaire.ID_Formulaire, formulaire.ID_Comptes, reponses.Reponse AS NomEleve, CONCAT(comptes.Nom,' ',comptes.Prenom) AS Hote, CONCAT(formulaire.Heure_Envoi,':',formulaire.Minute_Envoi) AS Heure
+  FROM formulaire
+  INNER JOIN comptes ON comptes.ID_Comptes = formulaire.ID_Comptes
+  INNER JOIN reponses ON reponses.ID_Formulaire = formulaire.ID_Formulaire AND reponses.ID_Comptes = formulaire.ID_Comptes
+  GROUP BY formulaire.ID_Formulaire, formulaire.ID_Comptes;
+[Info]: [20:09:13] Admin fetched existing answers using : SELECT formulaire.ID_Formulaire, formulaire.ID_Comptes, questions.Question, reponses.Reponse FROM formulaire
+    INNER JOIN reponses ON reponses.ID_Formulaire = formulaire.ID_Formulaire AND reponses.ID_Comptes = formulaire.ID_Comptes
+    INNER JOIN questions ON questions.ID_Question = reponses.ID_Question WHERE getPrimeQuesOfQuestion(questions.ID_Question) <> 19 AND getPrimeQuesOfQuestion(questions.ID_Question) <> 1;
+[Info]: [20:09:45] Admin fetched existing forms using : SELECT formulaire.ID_Formulaire, formulaire.ID_Comptes, reponses.Reponse AS NomEleve, CONCAT(comptes.Nom,' ',comptes.Prenom) AS Hote, CONCAT(formulaire.Heure_Envoi,':',formulaire.Minute_Envoi) AS Heure
+  FROM formulaire
+  INNER JOIN comptes ON comptes.ID_Comptes = formulaire.ID_Comptes
+  INNER JOIN reponses ON reponses.ID_Formulaire = formulaire.ID_Formulaire AND reponses.ID_Comptes = formulaire.ID_Comptes
+  GROUP BY formulaire.ID_Formulaire, formulaire.ID_Comptes;
+[Info]: [20:09:46] Admin fetched existing answers using : SELECT formulaire.ID_Formulaire, formulaire.ID_Comptes, questions.Question, reponses.Reponse FROM formulaire
+    INNER JOIN reponses ON reponses.ID_Formulaire = formulaire.ID_Formulaire AND reponses.ID_Comptes = formulaire.ID_Comptes
+    INNER JOIN questions ON questions.ID_Question = reponses.ID_Question WHERE getPrimeQuesOfQuestion(questions.ID_Question) <> 19 AND getPrimeQuesOfQuestion(questions.ID_Question) <> 1;
+[Info]: [20:09:46] Admin fetched existing forms using : SELECT formulaire.ID_Formulaire, formulaire.ID_Comptes, reponses.Reponse AS NomEleve, CONCAT(comptes.Nom,' ',comptes.Prenom) AS Hote, CONCAT(formulaire.Heure_Envoi,':',formulaire.Minute_Envoi) AS Heure
+  FROM formulaire
+  INNER JOIN comptes ON comptes.ID_Comptes = formulaire.ID_Comptes
+  INNER JOIN reponses ON reponses.ID_Formulaire = formulaire.ID_Formulaire AND reponses.ID_Comptes = formulaire.ID_Comptes
+  GROUP BY formulaire.ID_Formulaire, formulaire.ID_Comptes;
+[Info]: [20:09:46] Admin fetched existing answers using : SELECT formulaire.ID_Formulaire, formulaire.ID_Comptes, questions.Question, reponses.Reponse FROM formulaire
+    INNER JOIN reponses ON reponses.ID_Formulaire = formulaire.ID_Formulaire AND reponses.ID_Comptes = formulaire.ID_Comptes
+    INNER JOIN questions ON questions.ID_Question = reponses.ID_Question WHERE getPrimeQuesOfQuestion(questions.ID_Question) <> 19 AND getPrimeQuesOfQuestion(questions.ID_Question) <> 1;
+[Info]: [20:14:05] Admin fetched existing forms using : SELECT formulaire.ID_Formulaire, formulaire.ID_Comptes, reponses.Reponse AS NomEleve, CONCAT(comptes.Nom,' ',comptes.Prenom) AS Hote, CONCAT(formulaire.Heure_Envoi,':',formulaire.Minute_Envoi) AS Heure
+  FROM formulaire
+  INNER JOIN comptes ON comptes.ID_Comptes = formulaire.ID_Comptes
+  INNER JOIN reponses ON reponses.ID_Formulaire = formulaire.ID_Formulaire AND reponses.ID_Comptes = formulaire.ID_Comptes
+  GROUP BY formulaire.ID_Formulaire, formulaire.ID_Comptes;
+[Info]: [20:14:05] Admin fetched existing answers using : SELECT formulaire.ID_Formulaire, formulaire.ID_Comptes, questions.Question, reponses.Reponse FROM formulaire
+    INNER JOIN reponses ON reponses.ID_Formulaire = formulaire.ID_Formulaire AND reponses.ID_Comptes = formulaire.ID_Comptes
+    INNER JOIN questions ON questions.ID_Question = reponses.ID_Question WHERE getPrimeQuesOfQuestion(questions.ID_Question) <> 19 AND getPrimeQuesOfQuestion(questions.ID_Question) <> 1;
+[Info]: [20:14:05] Admin fetched existing forms using : SELECT formulaire.ID_Formulaire, formulaire.ID_Comptes, reponses.Reponse AS NomEleve, CONCAT(comptes.Nom,' ',comptes.Prenom) AS Hote, CONCAT(formulaire.Heure_Envoi,':',formulaire.Minute_Envoi) AS Heure
+  FROM formulaire
+  INNER JOIN comptes ON comptes.ID_Comptes = formulaire.ID_Comptes
+  INNER JOIN reponses ON reponses.ID_Formulaire = formulaire.ID_Formulaire AND reponses.ID_Comptes = formulaire.ID_Comptes
+  GROUP BY formulaire.ID_Formulaire, formulaire.ID_Comptes;
+[Info]: [20:14:05] Admin fetched existing answers using : SELECT formulaire.ID_Formulaire, formulaire.ID_Comptes, questions.Question, reponses.Reponse FROM formulaire
+    INNER JOIN reponses ON reponses.ID_Formulaire = formulaire.ID_Formulaire AND reponses.ID_Comptes = formulaire.ID_Comptes
+    INNER JOIN questions ON questions.ID_Question = reponses.ID_Question WHERE getPrimeQuesOfQuestion(questions.ID_Question) <> 19 AND getPrimeQuesOfQuestion(questions.ID_Question) <> 1;
+[Info]: [20:16:04] Admin fetched existing forms using : SELECT formulaire.ID_Formulaire, formulaire.ID_Comptes, reponses.Reponse AS NomEleve, CONCAT(comptes.Nom,' ',comptes.Prenom) AS Hote, CONCAT(formulaire.Heure_Envoi,':',formulaire.Minute_Envoi) AS Heure
+  FROM formulaire
+  INNER JOIN comptes ON comptes.ID_Comptes = formulaire.ID_Comptes
+  INNER JOIN reponses ON reponses.ID_Formulaire = formulaire.ID_Formulaire AND reponses.ID_Comptes = formulaire.ID_Comptes
+  GROUP BY formulaire.ID_Formulaire, formulaire.ID_Comptes;
+[Info]: [20:16:05] Admin fetched existing answers using : SELECT formulaire.ID_Formulaire, formulaire.ID_Comptes, questions.Question, reponses.Reponse FROM formulaire
+    INNER JOIN reponses ON reponses.ID_Formulaire = formulaire.ID_Formulaire AND reponses.ID_Comptes = formulaire.ID_Comptes
+    INNER JOIN questions ON questions.ID_Question = reponses.ID_Question WHERE getPrimeQuesOfQuestion(questions.ID_Question) <> 19 AND getPrimeQuesOfQuestion(questions.ID_Question) <> 1;
+[Info]: [20:16:05] Admin fetched existing forms using : SELECT formulaire.ID_Formulaire, formulaire.ID_Comptes, reponses.Reponse AS NomEleve, CONCAT(comptes.Nom,' ',comptes.Prenom) AS Hote, CONCAT(formulaire.Heure_Envoi,':',formulaire.Minute_Envoi) AS Heure
+  FROM formulaire
+  INNER JOIN comptes ON comptes.ID_Comptes = formulaire.ID_Comptes
+  INNER JOIN reponses ON reponses.ID_Formulaire = formulaire.ID_Formulaire AND reponses.ID_Comptes = formulaire.ID_Comptes
+  GROUP BY formulaire.ID_Formulaire, formulaire.ID_Comptes;
+[Info]: [20:16:05] Admin fetched existing answers using : SELECT formulaire.ID_Formulaire, formulaire.ID_Comptes, questions.Question, reponses.Reponse FROM formulaire
+    INNER JOIN reponses ON reponses.ID_Formulaire = formulaire.ID_Formulaire AND reponses.ID_Comptes = formulaire.ID_Comptes
+    INNER JOIN questions ON questions.ID_Question = reponses.ID_Question WHERE getPrimeQuesOfQuestion(questions.ID_Question) <> 19 AND getPrimeQuesOfQuestion(questions.ID_Question) <> 1;
+[Info]: [20:22:50] Admin fetched existing forms using : SELECT formulaire.ID_Formulaire, formulaire.ID_Comptes, reponses.Reponse AS NomEleve, CONCAT(comptes.Nom,' ',comptes.Prenom) AS Hote, CONCAT(formulaire.Heure_Envoi,':',formulaire.Minute_Envoi) AS Heure
+  FROM formulaire
+  INNER JOIN comptes ON comptes.ID_Comptes = formulaire.ID_Comptes
+  INNER JOIN reponses ON reponses.ID_Formulaire = formulaire.ID_Formulaire AND reponses.ID_Comptes = formulaire.ID_Comptes
+  GROUP BY formulaire.ID_Formulaire, formulaire.ID_Comptes;
+[Info]: [20:22:50] Admin fetched existing answers using : SELECT formulaire.ID_Formulaire, formulaire.ID_Comptes, questions.Question, reponses.Reponse FROM formulaire
+    INNER JOIN reponses ON reponses.ID_Formulaire = formulaire.ID_Formulaire AND reponses.ID_Comptes = formulaire.ID_Comptes
+    INNER JOIN questions ON questions.ID_Question = reponses.ID_Question WHERE getPrimeQuesOfQuestion(questions.ID_Question) <> 19 AND getPrimeQuesOfQuestion(questions.ID_Question) <> 1;
+[Info]: [20:22:50] Admin fetched existing forms using : SELECT formulaire.ID_Formulaire, formulaire.ID_Comptes, reponses.Reponse AS NomEleve, CONCAT(comptes.Nom,' ',comptes.Prenom) AS Hote, CONCAT(formulaire.Heure_Envoi,':',formulaire.Minute_Envoi) AS Heure
+  FROM formulaire
+  INNER JOIN comptes ON comptes.ID_Comptes = formulaire.ID_Comptes
+  INNER JOIN reponses ON reponses.ID_Formulaire = formulaire.ID_Formulaire AND reponses.ID_Comptes = formulaire.ID_Comptes
+  GROUP BY formulaire.ID_Formulaire, formulaire.ID_Comptes;
+[Info]: [20:22:51] Admin fetched existing answers using : SELECT formulaire.ID_Formulaire, formulaire.ID_Comptes, questions.Question, reponses.Reponse FROM formulaire
+    INNER JOIN reponses ON reponses.ID_Formulaire = formulaire.ID_Formulaire AND reponses.ID_Comptes = formulaire.ID_Comptes
+    INNER JOIN questions ON questions.ID_Question = reponses.ID_Question WHERE getPrimeQuesOfQuestion(questions.ID_Question) <> 19 AND getPrimeQuesOfQuestion(questions.ID_Question) <> 1;

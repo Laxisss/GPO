@@ -1,0 +1,23 @@
+[Info]: [10:57:47] Connection attempt with : SELECT verifyUser('i.ambrosino@peguy.org','Aisabelle') AS nombre;
+Got response : 1
+[Info]: [10:57:47] Account data fetched with : SELECT `ID_Comptes`, `Nom`, `Prenom`, `AdresseMail`, `MotDePasse`, `isAdmin`, `isActive` 
+            FROM `comptes` 
+            WHERE AdresseMail = LCASE('i.ambrosino@peguy.org') AND MotDePasse = SHA('Aisabelle');
+[Info]: [10:59:14] Connection attempt with : SELECT verifyUser('i.ambrosino@peguy.org','Aisabelle') AS nombre;
+Got response : 1
+[Info]: [10:59:14] Account data fetched with : SELECT `ID_Comptes`, `Nom`, `Prenom`, `AdresseMail`, `MotDePasse`, `isAdmin`, `isActive` 
+            FROM `comptes` 
+            WHERE AdresseMail = LCASE('i.ambrosino@peguy.org') AND MotDePasse = SHA('Aisabelle');
+[Info]: [11:09:00] Connection attempt with : SELECT verifyUser('i.ambrosino@peguy.org','Aisabelle') AS nombre;
+Got response : 1
+[Info]: [11:09:00] Account data fetched with : SELECT `ID_Comptes`, `Nom`, `Prenom`, `AdresseMail`, `MotDePasse`, `isAdmin`, `isActive` 
+            FROM `comptes` 
+            WHERE AdresseMail = LCASE('i.ambrosino@peguy.org') AND MotDePasse = SHA('Aisabelle');
+[Info]: [11:16:26] Connection attempt with : SELECT verifyUser('i.ambrosino@peguy.org','Aisabelle') AS nombre;
+Got response : 1
+[Info]: [11:16:26] Account data fetched with : SELECT `ID_Comptes`, `Nom`, `Prenom`, `AdresseMail`, `MotDePasse`, `isAdmin`, `isActive` 
+            FROM `comptes` 
+            WHERE AdresseMail = LCASE('i.ambrosino@peguy.org') AND MotDePasse = SHA('Aisabelle');
+[Info]: [12:03:54] User:[43] Sent new form using : 
+   INSERT INTO `reponses`(`ID_Reponses`, `Reponse`, `ID_Question`, `ID_Formulaire`, `ID_Comptes`) VALUES (1,"AMBROSINO","3",1,43),(2,"Isabelle","4",1,43),(3,"i.ambrosino@peguy.org","5",1,43),(4,"2000-01-01","6",1,43),(5,"0491157640","7",1,43),(6,"0491157640","8",1,43),(7,"","9",1,43),(8,"","10",1,43),(9,"3ème","11",1,43),(10,"marseille","12",1,43),(11,"BTS","19",1,43),(12,"Sélectionnez une réponse","28",1,43),(13,"Communication à la radio","1",1,43),(14,"Skyrock","20",1,43)
+
